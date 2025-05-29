@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Blog</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="top-menu">
+          <div class="logo-container">
+            <a href="app.html?page=home" class="logo">
+              <img src="assets/icons/logo.webp" alt="Logo" />
+              <p>Food Blog</p>
+              <p class="page-title"></p>
+            </a>
+          </div>
+          <div class="menu-wrapper">
+            <img src="assets/icons/menu.svg" alt="Toggle Mode" class="toggle-dark-mode" />
+            <img src="assets/icons/menu.svg" alt="Menu" class="toggle-navbar" />
+          </div>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="app.html?page=home">Beranda</a></li>
+            <li><a href="app.html?page=about">Tentang Kami</a></li>
+            <li><a href="app.html?page=contact">Kontak</a></li>
+            <li><a href="app.html?page=list">Daftar Menu</a></li>
+            <li><a href="app.html?page=foods">Makanan</a></li>
+            <li><a href="app.html?page=drinks">Minuman</a></li>
+            <li><a href="index.html" class="logout-button">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="content"></div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Food Blog. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
