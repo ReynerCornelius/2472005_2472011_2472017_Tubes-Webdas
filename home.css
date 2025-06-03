@@ -3,9 +3,6 @@
   margin: 0;
   padding: 0;
   outline: none;
-}
-
-*:not(table, thead, tbody, tr, th, td) {
   border: none;
 }
 
@@ -36,7 +33,7 @@ a {
 }
 
 header {
-  background-color: #6dc5d1;
+  background-color: #AA0114;
   color: #f7f7f7;
   border-bottom: 0.125rem solid #fde49e;
   z-index: 9999;
@@ -53,9 +50,9 @@ header .container {
 }
 
 .top-menu {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu-wrapper {
@@ -113,6 +110,10 @@ header .container {
 
 .logo img {
   height: 4rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: content-box;
 }
 
 .logo p,
@@ -151,17 +152,63 @@ header .container {
 }
 
 .navbar ul li a:hover,
-.navbar ul li a.active {
-  text-decoration-color: #feb941;
+.navbar /* Dropdown styles */
+.dropdown {
+  position: relative;
 }
-
-.navbar ul li a.logout-button:hover {
-  text-decoration-color: transparent;
-  color: #f7f7f7be;
+.dropbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:   #AA0114;
+  min-width: 180px;
+  display: inline-block;
+}
+.dropbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #AA0114;
+  min-width: 180px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+.dropdown-content a {
+  color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+.dropdown-content a:hover {
+  background-color: #feb94140;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+color: #f7f7f7be;
 }
 
 .hero {
-  background-image: url("https://www.grasshopperadventures.com/wp-content/uploads/2024/09/Banner-BLOG-22-Must-Try-Food-in-Taiwan.jpg");
+  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ztpzkoauqruezjw1lglb/HOTEL%20MADISON%20TAIPEI%20-%20Restoran%20%26%20Bar%20Itali%20di%20MRT%20Xinyi%20Anhe.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -174,7 +221,7 @@ header .container {
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  color: #f7f7f7;
+  color: #FFD700;
 }
 
 .hero .container h1 {
@@ -204,9 +251,9 @@ header .container {
   border-radius: 0.25rem;
 }
 
-main .container,
-footer .container {
+.container {
   padding: 4rem 2rem;
+  color: #FFD700;
 }
 
 .card-container {
@@ -315,7 +362,7 @@ td {
 
 footer {
   text-align: center;
-  background-color: #6dc5d1;
+  background-color: #AA0114;
   color: #f7f7f7;
 }
 
@@ -459,4 +506,13 @@ footer {
   .hero .hero-btn-wrapper {
     flex-direction: column;
   }
+}
+
+/* spacing for right-header navbar */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
