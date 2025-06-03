@@ -1,42 +1,3 @@
-:root {
-  --basic-border-radius: 0.25rem;
-  --basic-transition: 0.25s;
-  --basic-border-style: 0.1rem solid var(--color-4);
-  --medium-border-radius: 0.5rem;
-  --color-dark: #1a1a1a;
-  --color-dark-75: #1a1a1abe;
-  --color-dark-50: #1a1a1a80;
-  --color-dark-25: #1a1a1a40;
-  --color-dark-2: #222831;
-  --color-dark-2-75: #222831be;
-  --color-dark-2-50: #22283180;
-  --color-dark-2-25: #22283140;
-  --color-dark-3: #31363F;
-  --color-dark-s: #76ABAE;
-  --color-dark-s-75: #76ABAEbe;
-  --color-dark-s-50: #76ABAE80;
-  --color-dark-s-25: #76ABAE40;
-  --color-1: #dd761c;
-  --color-1-75: #dd761cbe;
-  --color-1-50: #dd761c80;
-  --color-1-25: #dd761c40;
-  --color-2: #feb941;
-  --color-2-75: #feb941be;
-  --color-2-50: #feb94180;
-  --color-2-25: #feb94140;
-  --color-3: #fde49e;
-  --color-3-75: #fde49ebe;
-  --color-3-50: #fde49e80;
-  --color-3-25: #fde49e40;
-  --color-4: #f7f7f7;
-  --color-4-75: #f7f7f7be;
-  --color-4-50: #f7f7f780;
-  --color-4-25: #f7f7f740;
-  --color-s-1: #6dc5d1;
-  --color-s-1-75: #6dc5d1be;
-  --color-s-1-50: #6dc5d180;
-  --color-s-1-25: #6dc5d140;
-}
 
 * {
   margin: 0;
@@ -49,8 +10,8 @@
 }
 
 body {
-  background-color: var(--color-4);
-  color: var(--color-dark);
+  background-color: #f7f7f7;
+  color: #1a1a1a;
   font-size: 1rem;
   line-height: 1.5;
   overflow-x: hidden;
@@ -75,9 +36,9 @@ a {
 }
 
 header {
-  background-color: var(--color-s-1);
-  color: var(--color-4);
-  border-bottom: 0.125rem solid var(--color-3);
+  background-color: #6dc5d1;
+  color: #f7f7f7;
+  border-bottom: 0.125rem solid #fde49e;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -106,8 +67,8 @@ header .container {
 .toggle-navbar,
 .toggle-dark-mode {
   cursor: pointer;
-  border: 0.1rem solid var(--color-4-75);
-  border-radius: var(--basic-border-radius);
+  border: 0.1rem solid #f7f7f7be;
+  border-radius: 0.25rem;
   width: 2rem;
 }
 
@@ -121,17 +82,17 @@ header .container {
   align-items: center;
   width: fit-content;
   padding: 0.5rem 1rem;
-  border-radius: var(--basic-border-radius);
-  background-color: var(--color-1);
-  color: var(--color-4);
-  transition: var(--basic-transition);
+  border-radius: 0.25rem;
+  background-color: #dd761c;
+  color: #f7f7f7;
+  transition: 0.25s;
   font-weight: 500;
   font-size: 1rem;
 }
 
 .btn-outline {
-  background-color: var(--color-dark-25);
-  border: 0.1rem solid var(--color-4);
+  background-color: #1a1a1a40;
+  border: 0.1rem solid #f7f7f7;
 }
 
 .btn:hover {
@@ -139,7 +100,7 @@ header .container {
 }
 
 .btn-outline:hover {
-  background-color: var(--color-dark-50);
+  background-color: #1a1a1a80;
 }
 
 .logo {
@@ -161,7 +122,7 @@ header .container {
 }
 
 .logo p:not(.page-title) {
-  border-right: 0.15rem solid var(--color-4);
+  border-right: 0.15rem solid #f7f7f7;
   padding-right: 0.65rem;
 }
 
@@ -181,7 +142,7 @@ header .container {
 }
 
 .navbar ul li a {
-  transition: var(--basic-transition);
+  transition: 0.25s;
   text-decoration: underline;
   text-decoration-thickness: 0.125rem;
   text-underline-offset: 0.5rem;
@@ -191,12 +152,12 @@ header .container {
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-  text-decoration-color: var(--color-2);
+  text-decoration-color: #feb941;
 }
 
 .navbar ul li a.logout-button:hover {
   text-decoration-color: transparent;
-  color: var(--color-4-75);
+  color: #f7f7f7be;
 }
 
 .hero {
@@ -213,16 +174,16 @@ header .container {
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  color: var(--color-4);
+  color: #f7f7f7;
 }
 
 .hero .container h1 {
   font-size: 3rem;
-  text-shadow: 0 0 1rem var(--color-1-25);
+  text-shadow: 0 0 1rem #dd761c40;
 }
 
 .hero .container p {
-  text-shadow: 0 0 0.25rem var(--color-1-50);
+  text-shadow: 0 0 0.25rem #dd761c80;
   font-weight: 500;
 }
 
@@ -235,37 +196,12 @@ header .container {
   white-space: nowrap;
 }
 
-main .container {
-  line-height: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-main .container h1,
-main .container h2,
-main .container h3 {
-  font-weight: 600;
-}
-
-main .container h1 {
-  margin-bottom: 1rem;
-}
-
-main .container p {
-  text-align: justify;
-}
-
-main .container p,
-main .container h2 {
-  margin-bottom: 1rem;
-}
 
 .figure {
   width: 20rem;
   object-fit: cover;
   object-position: center;
-  border-radius: var(--basic-border-radius);
+  border-radius: 0.25rem;
 }
 
 main .container,
@@ -280,12 +216,12 @@ footer .container {
 }
 
 .card {
-  background-color: var(--color-4);
+  background-color: #f7f7f7;
   border-radius: 0.5rem;
-  border: 0.25rem solid var(--color-dark-25);
+  border: 0.25rem solid #1a1a1a40;
   padding: 1rem;
   height: fit-content;
-  transition: var(--basic-transition);
+  transition: 0.25s;
   cursor: default;
 }
 
@@ -310,13 +246,13 @@ footer .container {
 .icon-wrapper img {
   width: 3rem;
   height: 4rem;
-  transition: var(--basic-transition);
+  transition: 0.25s;
   object-fit: contain;
   filter: grayscale(100%);
 }
 
 .card:hover {
-  border-color: var(--color-dark-50);
+  border-color: #1a1a1a80;
 }
 
 .card:hover .icon-wrapper img {
@@ -348,23 +284,23 @@ footer .container {
 }
 
 .food-list table th {
-  background-color: var(--color-2);
+  background-color: #feb941;
 }
 
 .drink-list table th {
-  background-color: var(--color-3);
+  background-color: #fde49e;
 }
 
 table {
   border-collapse: collapse;
-  border-radius: var(--basic-border-radius);
+  border-radius: 0.25rem;
   border-width: 0.125rem;
 }
 
 table,
 th,
 td {
-  border-color: var(--color-dark-75);
+  border-color: #1a1a1abe;
   border-style: solid;
 }
 
@@ -379,8 +315,8 @@ td {
 
 footer {
   text-align: center;
-  background-color: var(--color-s-1);
-  color: var(--color-4);
+  background-color: #6dc5d1;
+  color: #f7f7f7;
 }
 
 .contact {
@@ -398,10 +334,10 @@ footer {
 }
 
 .contact-form {
-  background-color: var(--color-3-75);
+  background-color: #fde49ebe;
   padding: 2rem;
-  border-radius: var(--medium-border-radius);
-  border: 0.25rem solid var(--color-2-25);
+  border-radius: 0.5rem;
+  border: 0.25rem solid #feb94140;
 }
 
 .input-group-wrapper {
@@ -418,7 +354,7 @@ footer {
 .input-group input,
 .input-group textarea {
   padding: 0.5rem 1rem;
-  border-radius: var(--basic-border-radius);
+  border-radius: 0.25rem;
   box-sizing: border-box;
 }
 
@@ -427,33 +363,33 @@ footer {
 }
 
 .dark {
-  background-color: var(--color-dark-3);
-  color: var(--color-4);
+  background-color: #31363F;
+  color: #f7f7f7;
 }
 
 .dark header {
-  background-color: var(--color-dark-2);
+  background-color: #222831;
   border-color: transparent;
 }
 
 .dark footer {
-  background-color: var(--color-dark-2);
+  background-color: #222831;
 }
 
 .dark .hero {
-  background-image: url(assets/imgs/hero-dark.webp);
+  background-image: url(../assets/imgs/hero-dark.webp);
 }
 
 .dark .hero .container h1 {
-  text-shadow: 0 0 .5rem var(--color-dark-25);
+  text-shadow: 0 0 .5rem #1a1a1a40;
 }
 
 .dark .hero .container p {
-  text-shadow: 0 0 0.25rem var(--color-dark-50);
+  text-shadow: 0 0 0.25rem #1a1a1a80;
 }
 
 .dark .btn:not(.btn-outline) {
-  background-color: var(--color-dark-s);
+  background-color: #76ABAE;
 }
 
 .dark .btn:not(.btn-outline):hover {
@@ -461,36 +397,36 @@ footer {
 }
 
 .dark .card {
-  background-color: var(--color-dark-2);
-  border-color: var(--color-dark-s-25);
+  background-color: #222831;
+  border-color: #76ABAE40;
 }
 
 .dark .card:hover {
-  border-color: var(--color-dark-s-50);
+  border-color: #76ABAE40
 }
 
 .dark .contact-form {
-  background-color: var(--color-dark-2-25);
-  border-color: var(--color-dark-s-25);
+  background-color: #22283140;
+  border-color: #76ABAE40;
 }
 
 .dark .navbar ul li a:hover,
 .dark .navbar ul li a.active {
-  text-decoration-color: var(--color-dark-s);
+  text-decoration-color: #76ABAE;
 }
 
 .dark table,
 .dark th,
 .dark td {
-  border-color: var(--color-4);
+  border-color: #f7f7f7;
 }
 
 .dark .food-list table th {
-  background-color: var(--color-dark-s-50);
+  background-color: #76ABAE40
 }
 
 .dark .drink-list table th {
-  background-color: var(--color-dark-s-25);
+  background-color: #76ABAE40;
 }
 
 @media screen and (max-width: 859px) {
