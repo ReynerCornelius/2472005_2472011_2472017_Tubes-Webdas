@@ -6,212 +6,143 @@
   <title>Taiwanese Food History</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
     body {
-      color: #5a3e2b;
-      padding: 20px;
-      line-height: 1.6;
-      background-image: url('assets/icons/wood.jpg');
-      background-repeat: repeat; 
-      background-size: auto;
-      background-position: center top;
-      background-attachment: fixed;
-      background-color: transparent;
+        color: #5a3e2b;
+        padding: 20px;
+        line-height: 1.6;
+        background-image: url('assets/icons/wood.jpg');
+        background-repeat: repeat; 
+        background-size: auto;
+        background-position: center top;
+        background-attachment: fixed;
+        background-color: transparent;
     }
     header {
-      text-align: center;
-      margin-bottom: 30px;
-      border-bottom: 3px;
-      padding-bottom: 10px;
-      display: grid;
-      justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px;
+        padding-bottom: 10px;
+        display: grid;
+        justify-content: center;
     }
     header h1 {
-      font-family: 'Brush Script MT', cursive;
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 5px;
-      text-shadow: 1px 1px 3px black;
+        font-family: 'Brush Script MT', cursive;
+        color: white;
+        font-size: 40px;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 3px black;
     }
     header p {
-      font-style: italic;
-      font-size: 1.1rem;
-      color: white;
+        font-style: italic;
+        font-size: 20px;
+        color: white;
     }
     .content {
-      max-width: 900px;
-      background: #fff6e8;
-      margin: auto;
-      border-radius: 15px;
-      padding: 25px 35px;
-      box-shadow: 0 8px 16px rgba(201, 129, 62, 0.3);
+        max-width: 900px;
+        background: #fff6e8;
+        margin: auto;
+        border-radius: 15px;
+        padding: 25px 35px;
+        box-shadow: 0 8px 16px rgba(201, 129, 62, 0.3);
+        height: 100px;
+        width: 200px;
+        background: rgba(201, 129, 62, 0.3); 
+        border-radius: 12px;
+        backdrop-filter: blur(8px); 
+        border: 1px solid rgba(201, 129, 62, 0.3);
+        color: #fff; 
+        max-width: 300px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 15px;
+        border-radius: 4px;
+    }
+    .content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 48px 0 rgba(201, 129, 62, 0.3);
+    }
+    .content-name {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 0.03em;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        margin-bottom: 6px;
+    }
+    .contentsamping {
+        max-width: 900px;
+        margin-top: -500px;
+        background: #fff6e8;
+        margin: auto;
+        border-radius: 15px;
+        padding: 25px 35px;
+        box-shadow: 0 8px 16px rgba(201, 129, 62, 0.3);
+        height: 100px;
     }
     section {
-      margin-bottom: 25px;
+        margin-bottom: 25px;
     }
     h2 {
-      border-bottom: 2px solid #de8478;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-      color: white;
+        border-bottom: 2px solid #de8478;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+        color: white;
     }
     p {
-      font-size: 2px;
-      color: white;
-      text-align: justify;
+        font-size: 2px;
+        color: white;
+        text-align: justify;
+    }
+    .slide {
+        display: grid;
+        height: 1000px;
+        width: 700px;
+    }
+    .item {
+        display: grid;
+        border-radius: 3px;
+        height: 400px;
+        object-fit: contain;
+        width: 100%; 
+        background-size: cover; 
+        background-position: center; 
+        position: relative; 
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        color: white;
+    }
+    .item:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 12px 48px 0 rgba(201, 129, 62, 0.3);
     }
     @media (max-width: 600px) {
       body {
         padding: 15px 10px;
       }
       header h1 {
-        font-size: 2.2rem;
+        font-size: 30px;
       }
       .container {
         padding: 15px 20px;
       }
-    }
-    /* .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 500px;
-    background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
-    }
-    .container .slide .item{
-        width: 200px;
-        height: 300px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 20px;
-        box-shadow: 0 30px 50px #505050;
-        background-position: 50% 50%;
-        background-size: cover;
-        display: inline-block;
-        transition: 0.5s;
-    }
-
-    .slide .item:nth-child(1),
-    .slide .item:nth-child(2){
-        top: 0;
-        left: 0;
-        transform: translate(0, 0);
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-
-    .slide .item:nth-child(3){
-        left: 50%;
-    }
-    .slide .item:nth-child(4){
-        left: calc(50% + 220px);
-    }
-    .slide .item:nth-child(5){
-        left: calc(50% + 440px);
-    }
-
-    .slide .item:nth-child(n + 6){
-        left: calc(50% + 660px);
-        opacity: 0;
-    }
-
-
-
-    .item .content{
-        position: absolute;
-        top: 50%;
-        left: 100px;
-        width: 300px;
-        text-align: left;
-        color: #eee;
-        transform: translate(0, -50%);
-        font-family: system-ui;
-        display: none;
-    }
-
-
-    .slide .item:nth-child(2) .content{
-        display: block;
-    }
-
-
-    .content .name{
-        font-size: 40px;
-        text-transform: uppercase;
-        font-weight: bold;
-        opacity: 0;
-        animation: animate 1s ease-in-out 1 forwards;
-    }
-
-    .content .des{
-        margin-top: 10px;
-        margin-bottom: 20px;
-        opacity: 0;
-        animation: animate 1s ease-in-out 0.3s 1 forwards;
-    }
-
-    .content button{
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        opacity: 0;
-        animation: animate 1s ease-in-out 0.6s 1 forwards;
-    }
-
-
-    @keyframes animate {
-        from{
-            opacity: 0;
-            transform: translate(0, 100px);
-            filter: blur(33px);
-        }
-
-        to{
-            opacity: 1;
-            transform: translate(0);
-            filter: blur(0);
-        }
-    }
-
-
-
-    .button{
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        bottom: 20px;
-    }
-
-    .button button{
-        width: 40px;
-        height: 35px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        margin: 0 5px;
-        border: 1px solid #000;
-        transition: 0.3s;
-    }
-
-    .button button:hover{
-        background: #ababab;
-        color: #fff;
-    }
-    .arrowleft{
-        background-image: url();
-    }
-    .arrowright{
-        background-image: url();
-    } */
+      .content {
+      width: 200px;
+      background: #fff6e8;
+      margin: auto;
+      border-radius: 15px;
+      padding: 25px 35px;
+      box-shadow: 0 8px 16px rgba(201, 129, 62, 0.3);
+      height: 300px;
+      }
+    } 
   </style>
 </head>
 <body>
@@ -221,56 +152,53 @@
     </header>
     <div class="container">
         <div class="slide">
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beefnoodle.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beefno.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beefn.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beeffn.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beeff.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
-                    <div class="item"
-                        style="background-image: url(detail/beef_noodle/beeeef.jpg);">
-                        <div class="content">
-                            <div class="name">Beef Noodle Soup</div>
-                            <a href="">See More</a>
-                        </div>
-                    </div>
+            <div class="item" style="background-image: url(detail/beef_noodle/beef.jpeg);">
+                <div class="content">
+                    <div class="name">Beef Noodle Soup</div>
+                    <a href="">See More</a>
                 </div>
-                <div class="button">
-                    <button class="prev">
-                        <i class="arrowleft"><--</i></button>
-                    <button class="next">
-                        <i class="arrowright">--></i></button>
+            </div>
+            <br>
+            <div class="item" style="background-image: url(detail/beef_noodle/dumpling.jpeg);">
+                <div class="content">
+                    <div class="name">Soup Dumplings</div>
+                    <a href="">See More</a>
                 </div>
-    <main class="content">
+            </div>
+            <br>
+            <div class="item"
+                style="background-image: url(detail/beef_noodle/slender.jpeg);">
+                <div class="content">
+                    <div class="name">Slender Noodles with Oysters</div>
+                    <a href="">See More</a>
+                </div>
+            </div>
+            <br>
+            <div class="item"
+                style="background-image: url(detail/beef_noodle/drunken.jpeg);">
+                <div class="content">
+                    <div class="name">Drunken Chicken</div>
+                    <a href="">See More</a>
+                </div>
+            </div>
+            <br>
+            <div class="item"
+                style="background-image: url(detail/beef_noodle/minced.jpeg);">
+                <div class="content">
+                    <div class="name">Minced Pork Rice</div>
+                    <a href="">See More</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+        <!-- <div class="button">
+            <button class="prev">
+                <i class="arrowleft"></i></button>
+            <button class="next">
+                <i class="arrowright"></i></button>
+        </div> -->
+    <main class="contentsamping">
             <section>
             <h2></h2>
             <p>
@@ -299,9 +227,8 @@
         })
         prev.addEventListener('click', function(){
             let items = document.querySelectorAll('.item')
-            document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+            document.querySelector('.slide').prepend(items[items.length - 1])
         })
     </script>
 </body>
 </html>
-
