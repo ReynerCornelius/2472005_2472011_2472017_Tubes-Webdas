@@ -1,33 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
-    background-color: bisque;
+    background-color: #da7676;
+    display: grid;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
 }
 h1{
     text-align: center;
 }
 .container{
-    display: grid;
-    justify-content: center;
     background-color: white;
     width: 800px;
-    margin-left: 23%;
+    margin-top: 30px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-radius: 20px;
+    box-shadow: 0 4px 6px ;
+    margin-bottom: 30px;
 }
 img{
-    width: 800px;
+    width: 600px;
     height: 400px;
+    margin-left: 105px;
 }
-.INSTRUKSI{
-    width: 800px;
-    background-color: white;
+
+.hias, .hias2{
+      padding: 5px;
+    text-align: center;
+    background-color: #FFF9C4;
+    border: solid 1px #c3c3c3;
 }
-#pos{
-    position:sticky;
-    left: 10px;
-    top: 10px;
-}
-#pos button{
-    width: 100px;
+.hias2{
+    padding: 50px;
+  display: none;
 }
