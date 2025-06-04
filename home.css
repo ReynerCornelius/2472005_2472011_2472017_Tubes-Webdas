@@ -4,27 +4,24 @@
   padding: 0;
   outline: none;
   border: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: #f7f7f7;
   color: #1a1a1a;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1rem;  
+      line-height: 1.5;
   overflow-x: hidden;
 }
 
 .container {
-  max-width: 65rem;
   margin: 0 auto;
   padding: 1rem 2rem;
-}
-
-body,
-input,
-textarea,
-button {
-  font-family: "Poppins", sans-serif;
+  flex: 1;
+  display: flex;
+  justify-content:space-between;
+  align-items: center; 
 }
 
 a {
@@ -36,41 +33,73 @@ header {
   background-color: #AA0114;
   color: #f7f7f7;
   border-bottom: 0.125rem solid #fde49e;
-  z-index: 9999;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   position: sticky;
 }
 
-header .container {
-  display: grid;
-  grid-template-columns: auto;
-  row-gap: 1rem;
+.navbar {
+  overflow: hidden;
+  font-family: Arial;
 }
 
-.top-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu-wrapper {
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   display: flex;
   gap: 1rem;
-  padding-left: 1rem;
+  list-style: none;
+}
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.toggle-navbar,
-.toggle-dark-mode {
-  cursor: pointer;
-  border: 0.1rem solid #f7f7f7be;
-  border-radius: 0.25rem;
-  width: 2rem;
+.dropbtn {
+  background-color: #AA0114;
+  color:white;
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 17px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 17px;
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
-
-.toggle-navbar {
-  display: none;
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dropdown {
+  display:none;
+  position: absolute;
+  background-color: #AA0114;
+  color: white;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  z-index: 1;
+  margin-top: 35px;
+  margin-left: -15px;
+}
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.dropdown-content li {
+  list-style: none;
+}
+.dropbtn:hover .dropdown {
+  display: block;
 }
 
 .btn {
@@ -80,24 +109,15 @@ header .container {
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  background-color: #dd761c;
+  background-color: #e63946;
   color: #f7f7f7;
   transition: 0.25s;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.btn-outline {
-  background-color: #1a1a1a40;
-  border: 0.1rem solid #f7f7f7;
-}
-
 .btn:hover {
-  background-color: hsl(28, 78%, 54%);
-}
-
-.btn-outline:hover {
-  background-color: #1a1a1a80;
+  background-color: hsl(10, 76%, 59%);
 }
 
 .logo {
@@ -132,86 +152,21 @@ header .container {
   align-items: center;
 }
 
-.navbar ul {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  place-items: center;
-}
-
-.navbar ul li a {
-  transition: 0.25s;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: transparent;
-  white-space: nowrap;
-}
-
-.navbar ul li a:hover,
-.navbar /* Dropdown styles */
-.dropdown {
-  position: relative;
-}
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:   #AA0114;
-  min-width: 180px;
-  display: inline-block;
-}
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #AA0114;
-  min-width: 180px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1000;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  margin-top: 0.25rem;
-}
-.dropdown-content a {
-  color: #1a1a1a;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  display: block;
-  transition: background 0.2s;
-  font-size: 1rem;
-}
-.dropdown-content a:hover {
-  background-color: #feb94140;
-}
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-color: #f7f7f7be;
-}
-
 .hero {
   background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ztpzkoauqruezjw1lglb/HOTEL%20MADISON%20TAIPEI%20-%20Restoran%20%26%20Bar%20Itali%20di%20MRT%20Xinyi%20Anhe.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero .container {
@@ -232,6 +187,7 @@ color: #f7f7f7be;
 .hero .container p {
   text-shadow: 0 0 0.25rem #dd761c80;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .hero .hero-btn-wrapper {
@@ -249,11 +205,6 @@ color: #f7f7f7be;
   object-fit: cover;
   object-position: center;
   border-radius: 0.25rem;
-}
-
-.container {
-  padding: 4rem 2rem;
-  color: #FFD700;
 }
 
 .card-container {
@@ -324,18 +275,6 @@ color: #f7f7f7be;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-}
-
-.list table {
-  width: 100%;
-}
-
-.food-list table th {
-  background-color: #feb941;
-}
-
-.drink-list table th {
-  background-color: #fde49e;
 }
 
 table {
@@ -409,73 +348,6 @@ footer {
   resize: vertical;
 }
 
-.dark {
-  background-color: #31363F;
-  color: #f7f7f7;
-}
-
-.dark header {
-  background-color: #222831;
-  border-color: transparent;
-}
-
-.dark footer {
-  background-color: #222831;
-}
-
-.dark .hero {
-  background-image: url(../assets/imgs/hero-dark.webp);
-}
-
-.dark .hero .container h1 {
-  text-shadow: 0 0 .5rem #1a1a1a40;
-}
-
-.dark .hero .container p {
-  text-shadow: 0 0 0.25rem #1a1a1a80;
-}
-
-.dark .btn:not(.btn-outline) {
-  background-color: #76ABAE;
-}
-
-.dark .btn:not(.btn-outline):hover {
-  background-color: hsl(180, 100%, 30%);
-}
-
-.dark .card {
-  background-color: #222831;
-  border-color: #76ABAE40;
-}
-
-.dark .card:hover {
-  border-color: #76ABAE40
-}
-
-.dark .contact-form {
-  background-color: #22283140;
-  border-color: #76ABAE40;
-}
-
-.dark .navbar ul li a:hover,
-.dark .navbar ul li a.active {
-  text-decoration-color: #76ABAE;
-}
-
-.dark table,
-.dark th,
-.dark td {
-  border-color: #f7f7f7;
-}
-
-.dark .food-list table th {
-  background-color: #76ABAE40
-}
-
-.dark .drink-list table th {
-  background-color: #76ABAE40;
-}
-
 @media screen and (max-width: 859px) {
   .logo-container {
     display: flex;
@@ -506,13 +378,4 @@ footer {
   .hero .hero-btn-wrapper {
     flex-direction: column;
   }
-}
-
-/* spacing for right-header navbar */
-.navbar ul {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
