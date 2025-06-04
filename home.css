@@ -15,10 +15,15 @@ body {
 }
 
 .container {
-  max-width: 65rem;
   margin: 0 auto;
   padding: 1rem 2rem;
-  flex: 1;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -40,10 +45,6 @@ header {
   align-items: center; 
 }
 
-<<<<<<< HEAD
-.navbar ul {
-  list-style-type: none;
-=======
 header .container {
   display: grid;
   grid-template-columns: auto;
@@ -57,58 +58,21 @@ header .container {
 }
 
 .menu-wrapper {
->>>>>>> 165d192f84434c7d39a2962572311cf66936c230
   display: flex;
   gap: 1rem;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  padding-left: 1rem;
 }
 
-/* Style untuk item nav */
-.navbar li a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: #f7f7f7;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+.toggle-navbar,
+.toggle-dark-mode {
+  cursor: pointer;
+  border: 0.1rem solid #f7f7f7be;
   border-radius: 0.25rem;
+  width: 2rem;
 }
 
-.navbar li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Tambahkan tampilan untuk tombol logout agar menonjol */
-.navbar li .logout-button {
-  background-color: #e63946;
-  color: white;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-}
-
-.navbar li .logout-button:hover {
-  background-color: #c92434;
-}
-
-/* Responsive breakpoint (opsional: ubah hanya jika di bawah 859px ingin ke bawah lagi) */
-@media screen and (max-width: 859px) {
-  .navbar {
-    display: block;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar li {
-    width: 100%;
-  }
-
-  .navbar li a {
-    width: 100%;
-  }
+.toggle-navbar {
+  display: none;
 }
 
 .btn {
@@ -118,24 +82,15 @@ header .container {
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  background-color: #dd761c;
+  background-color: #e63946;
   color: #f7f7f7;
   transition: 0.25s;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.btn-outline {
-  background-color: #1a1a1a40;
-  border: 0.1rem solid #f7f7f7;
-}
-
 .btn:hover {
-  background-color: hsl(28, 78%, 54%);
-}
-
-.btn-outline:hover {
-  background-color: #1a1a1a80;
+  background-color: hsl(10, 76%, 59%);
 }
 
 .logo {
@@ -170,30 +125,24 @@ header .container {
   align-items: center;
 }
 
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+.navbar ul {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:   #AA0114;
-  min-width: 180px;
-  display: inline-block;
+
+.navbar ul li a {
+  transition: 0.25s;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: transparent;
+  white-space: nowrap;
 }
-<<<<<<< HEAD
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
-}
-=======
 
 .navbar ul li a:hover,
 .navbar /* Dropdown styles */
@@ -222,7 +171,6 @@ header .container {
   font: inherit;
   color: inherit;
 }
->>>>>>> 165d192f84434c7d39a2962572311cf66936c230
 .dropdown-content {
   display: none;
   position: absolute;
@@ -259,6 +207,16 @@ color: #f7f7f7be;
   position: relative;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .hero .container {
   position: relative;
   height: 40rem;
@@ -277,6 +235,7 @@ color: #f7f7f7be;
 .hero .container p {
   text-shadow: 0 0 0.25rem #dd761c80;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .hero .hero-btn-wrapper {
@@ -296,8 +255,6 @@ color: #f7f7f7be;
   border-radius: 0.25rem;
 }
 
-<<<<<<< HEAD
-=======
 .container {
   padding: 4rem 2rem;
   color: #FFD700;
@@ -488,4 +445,3 @@ footer {
   margin: 0;
   padding: 0;
 }
->>>>>>> 165d192f84434c7d39a2962572311cf66936c230
