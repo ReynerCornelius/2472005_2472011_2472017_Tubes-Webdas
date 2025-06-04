@@ -260,7 +260,6 @@ color: #f7f7f7be;
   color: #FFD700;
 }
 
->>>>>>> 165d192f84434c7d39a2962572311cf66936c230
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -432,9 +431,6 @@ footer {
   .hero .hero-btn-wrapper {
     flex-direction: column;
   }
-<<<<<<< HEAD
-}
-=======
 }
 
 /* spacing for right-header navbar */
