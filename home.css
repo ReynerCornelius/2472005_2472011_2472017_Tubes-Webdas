@@ -1,19 +1,16 @@
-
 * {
   margin: 0;
   padding: 0;
   outline: none;
-}
-
-*:not(table, thead, tbody, tr, th, td) {
   border: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: #f7f7f7;
   color: #1a1a1a;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1rem;  
+      line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -21,13 +18,7 @@ body {
   max-width: 65rem;
   margin: 0 auto;
   padding: 1rem 2rem;
-}
-
-body,
-input,
-textarea,
-button {
-  font-family: "Poppins", sans-serif;
+  flex: 1;
 }
 
 a {
@@ -36,44 +27,72 @@ a {
 }
 
 header {
-  background-color: #6dc5d1;
+  background-color: #AA0114;
   color: #f7f7f7;
   border-bottom: 0.125rem solid #fde49e;
-  z-index: 9999;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
 }
 
-header .container {
-  display: grid;
-  grid-template-columns: auto;
-  row-gap: 1rem;
-}
-
-.top-menu {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-}
-
-.menu-wrapper {
+.navbar ul {
+  list-style-type: none;
   display: flex;
   gap: 1rem;
-  padding-left: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.toggle-navbar,
-.toggle-dark-mode {
-  cursor: pointer;
-  border: 0.1rem solid #f7f7f7be;
+/* Style untuk item nav */
+.navbar li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #f7f7f7;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
   border-radius: 0.25rem;
-  width: 2rem;
 }
 
-.toggle-navbar {
-  display: none;
+.navbar li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tambahkan tampilan untuk tombol logout agar menonjol */
+.navbar li .logout-button {
+  background-color: #e63946;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.navbar li .logout-button:hover {
+  background-color: #c92434;
+}
+
+/* Responsive breakpoint (opsional: ubah hanya jika di bawah 859px ingin ke bawah lagi) */
+@media screen and (max-width: 859px) {
+  .navbar {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar li a {
+    width: 100%;
+  }
 }
 
 .btn {
@@ -113,6 +132,10 @@ header .container {
 
 .logo img {
   height: 4rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: content-box;
 }
 
 .logo p,
@@ -131,37 +154,59 @@ header .container {
   align-items: center;
 }
 
-.navbar ul {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  place-items: center;
+.dropbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-
-.navbar ul li a {
-  transition: 0.25s;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: transparent;
-  white-space: nowrap;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:   #AA0114;
+  min-width: 180px;
+  display: inline-block;
 }
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  text-decoration-color: #feb941;
+.dropbtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
 }
-
-.navbar ul li a.logout-button:hover {
-  text-decoration-color: transparent;
-  color: #f7f7f7be;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #AA0114;
+  min-width: 180px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+.dropdown-content a {
+  color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+.dropdown-content a:hover {
+  background-color: #feb94140;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+color: #f7f7f7be;
 }
 
 .hero {
-  background-image: url("https://www.grasshopperadventures.com/wp-content/uploads/2024/09/Banner-BLOG-22-Must-Try-Food-in-Taiwan.jpg");
+  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ztpzkoauqruezjw1lglb/HOTEL%20MADISON%20TAIPEI%20-%20Restoran%20%26%20Bar%20Itali%20di%20MRT%20Xinyi%20Anhe.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -174,7 +219,7 @@ header .container {
   gap: 1rem;
   flex-direction: column;
   justify-content: center;
-  color: #f7f7f7;
+  color: #FFD700;
 }
 
 .hero .container h1 {
@@ -202,11 +247,6 @@ header .container {
   object-fit: cover;
   object-position: center;
   border-radius: 0.25rem;
-}
-
-main .container,
-footer .container {
-  padding: 4rem 2rem;
 }
 
 .card-container {
@@ -279,18 +319,6 @@ footer .container {
   object-fit: cover;
 }
 
-.list table {
-  width: 100%;
-}
-
-.food-list table th {
-  background-color: #feb941;
-}
-
-.drink-list table th {
-  background-color: #fde49e;
-}
-
 table {
   border-collapse: collapse;
   border-radius: 0.25rem;
@@ -315,7 +343,7 @@ td {
 
 footer {
   text-align: center;
-  background-color: #6dc5d1;
+  background-color: #AA0114;
   color: #f7f7f7;
 }
 
@@ -360,73 +388,6 @@ footer {
 
 .input-group textarea {
   resize: vertical;
-}
-
-.dark {
-  background-color: #31363F;
-  color: #f7f7f7;
-}
-
-.dark header {
-  background-color: #222831;
-  border-color: transparent;
-}
-
-.dark footer {
-  background-color: #222831;
-}
-
-.dark .hero {
-  background-image: url(../assets/imgs/hero-dark.webp);
-}
-
-.dark .hero .container h1 {
-  text-shadow: 0 0 .5rem #1a1a1a40;
-}
-
-.dark .hero .container p {
-  text-shadow: 0 0 0.25rem #1a1a1a80;
-}
-
-.dark .btn:not(.btn-outline) {
-  background-color: #76ABAE;
-}
-
-.dark .btn:not(.btn-outline):hover {
-  background-color: hsl(180, 100%, 30%);
-}
-
-.dark .card {
-  background-color: #222831;
-  border-color: #76ABAE40;
-}
-
-.dark .card:hover {
-  border-color: #76ABAE40
-}
-
-.dark .contact-form {
-  background-color: #22283140;
-  border-color: #76ABAE40;
-}
-
-.dark .navbar ul li a:hover,
-.dark .navbar ul li a.active {
-  text-decoration-color: #76ABAE;
-}
-
-.dark table,
-.dark th,
-.dark td {
-  border-color: #f7f7f7;
-}
-
-.dark .food-list table th {
-  background-color: #76ABAE40
-}
-
-.dark .drink-list table th {
-  background-color: #76ABAE40;
 }
 
 @media screen and (max-width: 859px) {
