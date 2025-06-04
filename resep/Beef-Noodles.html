@@ -5,54 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beef Noodles</title>
     <link rel="stylesheet" href="itemresep.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="drop.js"></script>
 </head>
 <body>
-    <div id="pos"><button><a href="resep.html">Back</a></button></div>
-    <div class="container">
-        <h1>Beef Noodles</h1>
-        <img src="img-resep/YONG-KANG-BEEF-NOODLE-Taipei-Taiwan-beef-noodles1.jpg"/>
-        
-        <h2>🍜 Bahan-Bahan</h2>
-        <h3>UNTUK SUP</h3>
-        <li>3 sampai 4 ponbetis sapi yang masih ada tulangnya (atau iga sapi)</li>
-        <li>5siung bawang putih, dihancurkan</li>
-        <li>1 inci kenop jahe segar, dikupas dan diiris</li>
-        <li>1 ikatdaun bawang, potong menjadi irisan 2 inci</li>
-        <li>1tomat plum, dibelah empat</li>
-        <li>1 sendok tehBubuk lima rempah Cina</li>
-        <li>1/4 cangkirgula merah kemasan</li>
-        <li>4 sampai 5polong adas bintang utuh</li>
-        <li>2Cabai Thailand, dibelah memanjang (opsional)</li>
-        <li>2 sendok makansaus kacang cabai</li>
-        <li>1/2 cangkirAnggur beras Cina (Shaoxing)</li>
-        <li>1 cangkirkecap asin berkualitas baik</li>
-        <li>1(14,5 ons) kaleng kaldu ayam</li>
-        <li>10 cangkirair, atau cukup untuk menutupi daging sapi</li>
+    <header class="header">
+      <div class="container2">
+        <div class="top-menu">
+          <div class="logo-container">
+            <a href="app.html?page=home" class="logo">
+              <img src="img-resep/logo.png" alt="Logo" />
+              <p>Top 5 Taiwan Foods</p>
+              <p class="page-title"></p>
+            </a>
+          </div>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="app.html?page=beranda">Beranda</a></li>
+            <li><a href="app.html?page=about">Detail</a></li>
+            <li><a href="app.html?page=contact">Resep</a></li>
+            <li><a href="resep/resep.html">About Us</a></li>
+            <li><a href="app.html?page=foods">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <h3>Untuk melayani</h3>
-        <li>1 ponbok choy muda atau brokoli rabe</li>
-        <li>1 ponMie telur Cina atau mie gandum</li>
-        <li>Daun ketumbar segar cincang, jika diinginkan</li>
-    <div class="INSTRUKSI">
-        <h2>INSTRUKSI</h2>
-        <p>
-        1. Untuk sup, dalam panci besar, tutupi betis sapi dengan air dan didihkan. Segera tiriskan air dan sisihkan daging sapi. (Langkah ini membantu menghilangkan kotoran untuk membuat sup yang lebih murni.) Bersihkan panci (atau siapkan panci lain).
-        <br>
-        2. Masukkan daging sapi rebus, bawang putih, jahe, daun bawang, tomat, bubuk lima rempah, gula merah, adas bintang, cabai, saus kacang cabai, arak beras, kecap asin, kaldu ayam, dan air ke dalam panci.
-        <br>
-        3. Didihkan campuran, kecilkan api, dan biarkan mendidih perlahan selama sekitar 2 jam, atau sampai daging sapi empuk saat ditusuk dengan garpu. Matikan api dan geser tutup panci agar uap keluar. Diamkan daging dalam cairan rebusan selama satu jam lagi.
-        <br>
-        4. Pindahkan daging sapi ke talenan. Tuang kaldu melalui saringan berlapis kain tipis ke panci lain. Buang padatan sayuran. Iris daging sapi dan masukkan kembali ke dalam kaldu. (Pada tahap ini, sebaiknya masukkan sup ke dalam lemari es semalaman, atau hingga tiga hari. Rasa akan lebih nikmat saat didiamkan dan lemak akan lebih mudah dikeluarkan.) Buang lemak dari permukaan, dan didihkan kembali sup.
-        <br>
-        5. Untuk penyajian, didihkan air dalam panci besar. Masukkan sawi putih dan rebus hingga berwarna hijau terang dan empuk, sekitar 2 menit. Angkat sawi putih dengan garpu dan sisihkan. Didihkan kembali air. Masukkan mi dan masak sesuai petunjuk pada kemasan. Saring.
-        <br>
-        6. Bagi mie dan sawi putih ke dalam mangkuk. Tuang daging sapi dan kaldu panas ke dalam mangkuk. Hiasi dengan daun ketumbar cincang dan sajikan hangat.
-        </p>
-        <br>
-        <h2>Berikut adalah video tutorial cara membuatnya</h2>
-        <iframe width="800" height="345" src="https://www.youtube.com/embed/LqmC0k-aYRM?si=4vMpc701T3Fxhm4t">
-        </iframe>
-    </div>
+    <div class="main">
+      <div class="container">
+          <h1>Beef Noodles</h1>
+          <br>
+          <img src="img-resep/YONG-KANG-BEEF-NOODLE-Taipei-Taiwan-beef-noodles1.jpg"/>
+          <br>
+          <br>
+          <h2>Deskripsi Singkat:</h2>
+          <p>Beef Noodles Taiwan adalah hidangan mie dengan sup kaldu daging sapi yang kaya rasa, disajikan bersama potongan daging sapi yang empuk (biasanya potongan sandung lamur atau shank). Supnya bisa memiliki rasa pedas ataupun tidak, tergantung variasi resep.</p>
+          <br>
+          <div id="vid" class="hias">
+              <h2>🎥 Berikut adalah video tutorial cara membuatnya (klik untuk tampil/sembunyi)</h2>
+          </div>
+          <div id="yt" class="hias2">
+              <iframe width="700" height="345" src="https://www.youtube.com/embed/LqmC0k-aYRM?si=4vMpc701T3Fxhm4t"></iframe>
+          </div>
+          <br>
+          <div id="jbahan" class="hias">
+              <h2>🍜 Bahan-Bahan (klik untuk tampil/sembunyi)</h2>
+          </div>
+
+          <div id="bahan" class="hias2">
+              <h3>UNTUK SUP (click ini)</h3>
+              <li>3 sampai 4 ponbetis sapi yang masih ada tulangnya (atau iga sapi)</li>
+              <li>5siung bawang putih, dihancurkan</li>
+              <li>1 inci kenop jahe segar, dikupas dan diiris</li>
+              <li>1 ikatdaun bawang, potong menjadi irisan 2 inci</li>
+              <li>1tomat plum, dibelah empat</li>
+              <li>1 sendok tehBubuk lima rempah Cina</li>
+              <li>1/4 cangkirgula merah kemasan</li>
+              <li>4 sampai 5polong adas bintang utuh</li>
+              <li>2Cabai Thailand, dibelah memanjang (opsional)</li>
+              <li>2 sendok makansaus kacang cabai</li>
+              <li>1/2 cangkirAnggur beras Cina (Shaoxing)</li>
+              <li>1 cangkirkecap asin berkualitas baik</li>
+              <li>1(14,5 ons) kaleng kaldu ayam</li>
+              <li>10 cangkirair, atau cukup untuk menutupi daging sapi</li>
+
+              <h3>Untuk melayani</h3>
+              <li>1 ponbok choy muda atau brokoli rabe</li>
+              <li>1 ponMie telur Cina atau mie gandum</li>
+              <li>Daun ketumbar segar cincang, jika diinginkan</li>
+          </div>
+
+          <br>
+
+          <div id="jInstruksi" class="hias">
+              <h2>INSTRUKSI (klik untuk tampil/sembunyi)</h2>
+          </div>
+          <div id="instruksi" class="hias2">
+              <p>
+              1. Untuk sup, dalam panci besar, tutupi betis sapi dengan air dan didihkan. Segera tiriskan air dan sisihkan daging sapi. (Langkah ini membantu menghilangkan kotoran untuk membuat sup yang lebih murni.) Bersihkan panci (atau siapkan panci lain).
+              <br>
+              2. Masukkan daging sapi rebus, bawang putih, jahe, daun bawang, tomat, bubuk lima rempah, gula merah, adas bintang, cabai, saus kacang cabai, arak beras, kecap asin, kaldu ayam, dan air ke dalam panci.
+              <br>
+              3. Didihkan campuran, kecilkan api, dan biarkan mendidih perlahan selama sekitar 2 jam, atau sampai daging sapi empuk saat ditusuk dengan garpu. Matikan api dan geser tutup panci agar uap keluar. Diamkan daging dalam cairan rebusan selama satu jam lagi.
+              <br>
+              4. Pindahkan daging sapi ke talenan. Tuang kaldu melalui saringan berlapis kain tipis ke panci lain. Buang padatan sayuran. Iris daging sapi dan masukkan kembali ke dalam kaldu. (Pada tahap ini, sebaiknya masukkan sup ke dalam lemari es semalaman, atau hingga tiga hari. Rasa akan lebih nikmat saat didiamkan dan lemak akan lebih mudah dikeluarkan.) Buang lemak dari permukaan, dan didihkan kembali sup.
+              <br>
+              5. Untuk penyajian, didihkan air dalam panci besar. Masukkan sawi putih dan rebus hingga berwarna hijau terang dan empuk, sekitar 2 menit. Angkat sawi putih dengan garpu dan sisihkan. Didihkan kembali air. Masukkan mi dan masak sesuai petunjuk pada kemasan. Saring.
+              <br>
+              6. Bagi mie dan sawi putih ke dalam mangkuk. Tuang daging sapi dan kaldu panas ke dalam mangkuk. Hiasi dengan daun ketumbar cincang dan sajikan hangat.
+              </p>
+              <br>
+          </div>
     </div>
 </body>
 </html>
