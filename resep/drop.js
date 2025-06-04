@@ -1,17 +1,13 @@
-$(document).ready(function(){
-  $("#vid").click(function(){
-    $("#yt").slideToggle("slow");
-  });
-});
+$(document).ready(function() {
+    $("#vid").click(function() {
+        $("#yt").slideToggle();
+    });
 
-$(document).ready(function(){
-  $("#jbahan").click(function(){
-    $("#bahan").slideToggle("slow");
-  });
-});
+    $("#jbahan").click(function() {
+        $("#bahan").slideToggle();
+    });
 
-$(document).ready(function(){
-  $("#jInstruksi").click(function(){
-    $("#instruksi").slideToggle("slow");
-  });
+    $("#jInstruksi").click(function() {
+        $("#instruksi").slideToggle();
+    });
 });
