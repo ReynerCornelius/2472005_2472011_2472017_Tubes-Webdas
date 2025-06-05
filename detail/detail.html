@@ -61,7 +61,7 @@
         color: #5a3e2b;
         padding: 20px;
         line-height: 1.6;
-        background-image: url('assets/icons/wood.jpg');
+        background-image: url('wood.jpg');
         background-repeat: repeat;
         background-size: auto;
         background-position: center top;
@@ -131,25 +131,108 @@
         color: #5a3e2b;
         text-align: justify;
     }
-    .carousel-item img {
-        max-height: 400px;
-        max-width: 500px;
-        margin-left: 480px;
-        object-fit: cover;
+
+    #foodCarousel {
+        max-width: 600px;
+        margin: 40px auto 60px;
         border-radius: 15px;
-        transition: transform 2s ease;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        background: #fff6e8;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid #de8478;
     }
-    .carousel-item img:hover {
-        transform: scale(1.05);
+    .carousel-inner {
+        border-radius: 15px;
     }
-    .carousel-caption {
-        max-height: 400px;
-        max-width: 500px;
-        margin-left: 258px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
+    .carousel-item {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
         padding: 10px;
     }
+    .carousel-item img {
+        max-height: 350px;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.5s ease, filter 0.5s ease;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    }
+    .carousel-item img:hover {
+        transform: scale(1.08);
+        filter: brightness(0.85);
+    }
+    .carousel-caption {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(222, 132, 120, 0.85);
+        border-radius: 10px;
+        padding: 15px 25px;
+        max-width: 90%;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: background-color 0.3s ease;
+    }
+    .carousel-caption h5 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 3px #3b1e12;
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+        line-height: 1.35;
+        max-height: 4.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .carousel-caption a.btn {
+        margin-top: 8px;
+        color: #de8478;
+        font-weight: 600;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px 12px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .carousel-caption a.btn:hover {
+        background-color: #c6705f;
+        color: white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(222, 132, 120, 0.85);
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        border: 2px solid white;
+    }
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: #c6705f;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
+        width: 20px;
+        height: 20px;
+    }
+
     div p {
         color: #fff6e8;
     }
@@ -171,6 +254,7 @@
         border-radius: 8px;
         border: 1px solid #ccc;
         overflow: hidden;
+        transition: transform 0.3s ease;
     }
     .itemmap:hover {
         transform: scale(1.05);
@@ -181,6 +265,11 @@
         text-align: center;
         margin-bottom: 5px;
         text-shadow: 1px 1px 3px black;
+        padding: 5px 0;
+        background: #de8478;
+        color: white;
+        font-weight: 700;
+        border-radius: 0 0 8px 8px;
     }
     @media (max-width: 600px) {
         body {
@@ -192,6 +281,17 @@
         .slide {
             width: 100%;
         }
+        #foodCarousel {
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+        .carousel-caption {
+            font-size: 0.9rem;
+            padding: 10px 15px;
+        }
+        .carousel-caption p {
+            max-height: none;
+        }
     }
   </style>
 </head>
@@ -201,7 +301,7 @@
         <div class="top-menu">
           <div class="logo-container">
             <a href="app.html?page=home" class="logo">
-              <img src="assets/icons/logo.png" alt="Logo" />
+              <img src="logo.png" alt="Logo" />
               <p class="page-title"></p>
             </a>
           </div>
@@ -219,12 +319,12 @@
     </header>
     <header class="head">
         <h1>Detail Foods</h1>
-        <p>The Sweet Taste of Taiwan's Heritage</p>
+        <p>Kulineran dengan Hati, Bukan Hanya Perut.</p>
     </header>
     <div id="foodCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="detail/beef.jpeg" class="d-block w-100" alt="Beef Noodle Soup">
+                <img src="beef.jpeg" class="d-block w-100" alt="Beef Noodle Soup">
                 <div class="carousel-caption">
                 <h5>Beef Noodle Soup</h5>
                 <p>Beef Noodle Soup adalah sup mie khas Taiwan berisi mie, potongan daging sapi empuk, dan kuah kaldu yang kaya rempah. Rasanya gurih, hangat, dan sangat populer sebagai comfort food.</p>
@@ -236,34 +336,34 @@
                 <div class="carousel-caption">
                 <h5>Soup Dumplings</h5>
                 <p>Soup dumplings (Xiao Long Bao) adalah pangsit kukus khas Taiwan berisi daging dan kaldu panas di dalamnya. Saat digigit, kuah hangatnya langsung keluar, memberi sensasi lembut dan gurih.</p>
-                <a href="#" class="btn btn-light btn-sm">See More</a>
+                <a href="soup_dumpling.html" class="btn btn-light btn-sm">See More</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="detail/slender.jpeg" class="d-block w-100" alt="Slender Noodles">
+                <img src="slender.jpeg" class="d-block w-100" alt="Slender Noodles">
                 <div class="carousel-caption">
                 <h5>Slender Noodles with Oysters</h5>
                 <p>Slender Noodles with Oysters adalah hidangan mie halus khas Taiwan yang disajikan dengan tiram segar, kaldu kental, dan kadang ditambah usus babi. Rasanya gurih dan sedikit kental, cocok disantap hangat.</p>
-                <a href="#" class="btn btn-light btn-sm">See More</a>
+                <a href="slender_noodle.html" class="btn btn-light btn-sm">See More</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="detail/drunken.jpeg" class="d-block w-100" alt="Drunken Chicken">
+                <img src="drunken.jpeg" class="d-block w-100" alt="Drunken Chicken">
                 <div class="carousel-caption">
                 <h5>Drunken Chicken</h5>
                 <p>Drunken chicken adalah hidangan ayam khas Taiwan yang dimasak lalu direndam dalam campuran arak beras, jahe, dan bumbu. Disajikan dingin dengan rasa gurih dan aroma alkohol yang khas.</p>
-                <a href="#" class="btn btn-light btn-sm">See More</a>
+                <a href="druken_chicken.html" class="btn btn-light btn-sm">See More</a>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="detail/minced.jpeg" class="d-block w-100" alt="Minced Pork Rice">
+                <img src="minced.jpeg" class="d-block w-100" alt="Minced Pork Rice">
                 <div class="carousel-caption">
                 <h5>Minced Pork Rice</h5>
                 <p>Minced pork rice (Lu Rou Fan) adalah nasi putih dengan daging babi cincang yang dimasak dalam kecap dan rempah. Rasanya manis-gurih dan populer sebagai makanan rumahan di Taiwan.</p>
-                <a href="#" class="btn btn-light btn-sm">See More</a>
+                <a href="minced_pork.html" class="btn btn-light btn-sm">See More</a>
+                </div>
             </div>
         </div>
-    </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -279,45 +379,49 @@
         </p>
         </section>
         <section>
-            <table border="1" cellpadding="10" cellspacing="0">
+            <table border="1" cellpadding="10" cellspacing="0" align="center" style="border: 2px solid black;">
                 <tr>
-                <th colspan="2">Informasi Umum Taiwan</th>
+                    <th colspan="2" align="center"><b>Informasi Umum Taiwan</b></th>
                 </tr>
                 <tr>
-                <td>Nama Resmi</td>
-                <td>Republik Tiongkok (Republic of China / ROC)</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                <td>Ibu Kota</td>
-                <td>Taipei</td>
+                    <td width="250"><b>Nama Resmi</b></td>
+                    <td>Republik Tiongkok (Republic of China / ROC)</td>
                 </tr>
                 <tr>
-                <td>Luas Wilayah</td>
-                <td>± 36.197 km²</td>
+                    <td><b>Ibu Kota</b></td>
+                    <td>Taipei</td>
                 </tr>
                 <tr>
-                <td>Populasi</td>
-                <td>± 23 juta jiwa (2025)</td>
+                    <td><b>Luas Wilayah</b></td>
+                    <td>± 36.197 km²</td>
                 </tr>
                 <tr>
-                <td>Bahasa Resmi</td>
-                <td>Mandarin (Mandarin Taiwan)</td>
+                    <td><b>Populasi</b></td>
+                    <td>± 23 juta jiwa (2025)</td>
                 </tr>
                 <tr>
-                <td>Mata Uang</td>
-                <td>Dolar Baru Taiwan (TWD/NT$)</td>
+                    <td><b>Bahasa Resmi</b></td>
+                    <td>Mandarin (Mandarin Taiwan)</td>
                 </tr>
                 <tr>
-                <td>Zona Waktu</td>
-                <td>UTC+8 (Waktu Standar Taiwan)</td>
+                    <td><b>Mata Uang</b></td>
+                    <td>Dolar Baru Taiwan (TWD/NT$)</td>
                 </tr>
                 <tr>
-                <td>Bentuk Pemerintahan</td>
-                <td>Demokrasi Semi-Presidensial</td>
+                    <td><b>Zona Waktu</b></td>
+                    <td>UTC+8 (Waktu Standar Taiwan)</td>
                 </tr>
                 <tr>
-                <td>Presiden Saat Ini</td>
-                <td>Lai Ching-te (sejak 2024)</td>
+                    <td><b>Bentuk Pemerintahan</b></td>
+                    <td>Demokrasi Semi-Presidensial</td>
+                </tr>
+                <tr>
+                    <td><b>Presiden Saat Ini</b></td>
+                    <td>Lai Ching-te (sejak 2024)</td>
                 </tr>
             </table>
         </section>
