@@ -10,38 +10,88 @@ body {
   background-color: #f7f7f7;
   color: #1a1a1a;
   font-size: 1rem;  
-      line-height: 1.5;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 header {
   background-color: #AA0114;
-  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+footer {
+  text-align: center;
+  background-color: #AA0114;
+  color: #f7f7f7;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+.container {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: #FFD700;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #AA0114;
+  padding: 0 1rem;
 }
 
-.top-menu {
-  display: flex;
-  align-items: center;
-}
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  background-color: #e63946;
-  color: #f7f7f7;
-  transition: 0.25s;
+.navbar a, .dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: hsl(10, 76%, 59%);
+.navbar a:hover, .dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA0114;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*---------------------------------------------------------------------------------------------*/
 
 .logo {
   display: flex;
@@ -57,70 +107,6 @@ header {
   border-radius: 50%;
   padding: 0.5rem;
   box-sizing: content-box;
-}
-
-.logo p,
-.page-title {
-  font-weight: 500;
-  font-size: 1.25rem;
-}
-
-.logo p:not(.page-title) {
-  border-right: 0.15rem solid #f7f7f7;
-  padding-right: 0.65rem;
-}
-
-.page-title {
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul {
-  display: grid;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  place-items: center;
-}
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #AA0114;
-  min-width: 180px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1000;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  margin-top: 0.25rem;
-}
-.dropdown-content a {
-  color: #1a1a1a;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  display: block;
-  transition: background 0.2s;
-  font-size: 1rem;
-}
-.dropdown-content a:hover {
-  background-color: #feb94140;
-}
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-color: #f7f7f7be;
 }
 
 .hero {
@@ -170,159 +156,19 @@ color: #f7f7f7be;
   white-space: nowrap;
 }
 
+/*---------------------------------------------------------------------------------------------*/
 
-.figure {
-  width: 20rem;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.25rem;
-}
-
-.container {
-  padding: 4rem 2rem;
-  color: #FFD700;
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  background-color: #f7f7f7;
-  border-radius: 0.5rem;
-  border: 0.25rem solid #1a1a1a40;
-  padding: 1rem;
-  height: fit-content;
-  transition: 0.25s;
-  cursor: default;
-}
-
-.card .profile-img {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.card h2,
-.card h3 {
-  font-weight: 600;
-}
-
-.icon-wrapper {
+.desain_main{
   display: flex;
-  gap: 1rem;
-}
-
-.icon-wrapper img {
-  width: 3rem;
-  height: 4rem;
-  transition: 0.25s;
-  object-fit: contain;
-  filter: grayscale(100%);
-}
-
-.card:hover {
-  border-color: #1a1a1a80;
-}
-
-.card:hover .icon-wrapper img {
-  filter: grayscale(0);
-}
-
-.card .btn,
-.contact-text .btn {
-  padding: 0.25rem 1rem;
-}
-
-.card-menu .card {
-  padding: 0;
-  overflow: hidden;
-}
-
-.card-menu .card-content {
-  padding: 1rem;
-}
-
-.card-menu .card img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-
-table {
-  border-collapse: collapse;
-  border-radius: 0.25rem;
-  border-width: 0.125rem;
-}
-
-table,
-th,
-td {
-  border-color: #1a1a1abe;
-  border-style: solid;
-}
-
-th {
-  font-weight: 600;
-}
-
-th,
-td {
-  padding: 0.5rem;
-}
-
-footer {
-  text-align: center;
-  background-color: #AA0114;
-  color: #f7f7f7;
-}
-
-.contact {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.contact-text {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align-last: center;
+  justify-content:flex-start;
 }
 
-.contact-form {
-  background-color: #fde49ebe;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  border: 0.25rem solid #feb94140;
+.desain_main img{
+  width: 25%;
+  height: 25%;
 }
-
-.input-group-wrapper {
-  display: grid;
-  row-gap: 1rem;
-}
-
-.contact-form button,
-.input-group input,
-.input-group textarea {
-  width: 100%;
-}
-
-.input-group input,
-.input-group textarea {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-}
-
-.input-group textarea {
-  resize: vertical;
-}
+/*---------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 859px) {
   .logo-container {
@@ -354,13 +200,15 @@ footer {
   .hero .hero-btn-wrapper {
     flex-direction: column;
   }
+ .desain_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Kurangi gap untuk mobile */
+  }
+
+  .desain_main img {
+    width: 25%;
+  height: 25%;
+  }
 }
 
-/* spacing for right-header navbar */
-.navbar ul {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
