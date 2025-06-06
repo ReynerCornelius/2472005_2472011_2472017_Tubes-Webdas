@@ -1,11 +1,9 @@
 
-// Ambil parameter page dari URL
 function getPageParam() {
   const params = new URLSearchParams(window.location.search);
   return params.get("page") || "home";
 }
 
-// Tampilkan konten ke elemen dengan class .content
 function showPage() {
   const page = getPageParam();
   const content = pages[page] || pages.home;
@@ -52,3 +50,37 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all sections that need animation
+  const sections = document.querySelectorAll('.animate-section');
+  
+  // Create Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          // Add 'show' class when section is visible
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          }
+      });
+  }, {
+      threshold: 0.1 // Trigger when 10% of element is visible
+  });
+
+  // Observe each section
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+
+  // Simple hover effect for food items
+  const foodItems = document.querySelectorAll('.food-item');
+  foodItems.forEach(item => {
+      item.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px)';
+      });
+      item.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+      });
+  });
+});
+
