@@ -1,0 +1,137 @@
+.navbar {
+    position: fixed;
+    top: -1px;
+    left: 0;
+    border: none;
+    height: 150px;
+    z-index: 9999;
+    border-radius: none;
+}
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(135deg, #f7e1d7, #f9f4f0);
+    color: #511619;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+main.contentsamping {
+    background: #fff7ee;
+    max-width: 900px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(191, 140, 66, 0.3);
+    padding: 40px 50px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease forwards;
+}
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #b93725;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 0 #f5e3d7;
+}
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8em;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+h2 {
+    border-bottom: 3px solid #d85a3a;
+    padding-bottom: 6px;
+    font-weight: 700;
+}
+h3 {
+    color: #87411a;
+    margin-top: 1.2em;
+    font-weight: 600;
+}
+p {
+    margin-top: 0.5em;
+    color: #5a2d1d;
+    font-size: 1.1rem;
+}
+strong {
+    color: #a33010;
+}
+em {
+    font-style: italic;
+    color: #76321f;
+}
+ul, ol {
+    margin-left: 1.2em;
+    margin-top: 0.4em;
+    margin-bottom: 1.2em;
+    color: #6b2f18;
+    font-weight: 500;
+}
+ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+ul li::before {
+    content: "🍜";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(2px);
+    font-size: 1.1em;
+    color: #c1411d;
+}
+ol li {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+img {
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto 30px auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(191, 140, 66, 0.4);
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05);
+}
+.map-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 3px solid #d77437;
+    height: 450px;
+    max-width: 100%;
+}
+.map-container iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+@media (max-width: 600px) {
+body {
+    padding: 20px 15px;
+}
+main.contentsamping {
+    padding: 25px 20px;
+    border-radius: 15px;
+}
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+img {
+    border-radius: 12px;
+}
+.map-container {
+    height: 280px;
+}
+}

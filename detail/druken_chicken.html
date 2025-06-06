@@ -1,255 +1,81 @@
-    <!DOCTYPE html>
-    <html lang="id">
-    <head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
     <meta charset="UTF-8" />
     <title>Sejarah Beef Noodle Soup</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans TC', sans-serif;
-            background: linear-gradient(135deg, #f7e1d7, #f9f4f0);
-            color: #511619;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-        main.contentsamping {
-            background: #fff7ee;
-            max-width: 900px;
-            border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(191, 140, 66, 0.3);
-            padding: 40px 50px;
-            box-sizing: border-box;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease forwards;
-        }
-        h1, h2, h3 {
-            font-family: 'Merriweather', serif;
-            color: #b93725;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-            text-shadow: 1px 1px 0 #f5e3d7;
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.8em;
-            text-align: center;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-        h2 {
-            border-bottom: 3px solid #d85a3a;
-            padding-bottom: 6px;
-            font-weight: 700;
-        }
-        h3 {
-            color: #87411a;
-            margin-top: 1.2em;
-            font-weight: 600;
-        }
-        p {
-            margin-top: 0.5em;
-            color: #5a2d1d;
-            font-size: 1.1rem;
-        }
-        strong {
-            color: #a33010;
-        }
-        em {
-            font-style: italic;
-            color: #76321f;
-        }
-        ul, ol {
-            margin-left: 1.2em;
-            margin-top: 0.4em;
-            margin-bottom: 1.2em;
-            color: #6b2f18;
-            font-weight: 500;
-        }
-        ul li {
-            position: relative;
-            padding-left: 22px;
-            margin-bottom: 10px;
-        }
-        ul li::before {
-            content: "🍜";
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: translateY(2px);
-            font-size: 1.1em;
-            color: #c1411d;
-        }
-        ol li {
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        img {
-            display: block;
-            width: 600px;
-            height: 400px;
-            margin: 0 auto 30px auto;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(191, 140, 66, 0.4);
-            transition: transform 0.3s ease;
-        }
-        img:hover {
-            transform: scale(1.05);
-        }
-        .map-container {
-            position: relative;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(191, 140, 66, 0.5);
-            overflow: hidden;
-            margin-top: 15px;
-            border: 3px solid #d77437;
-            height: 450px;
-            max-width: 100%;
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-        }
-        @media (max-width: 600px) {
-        body {
-            padding: 20px 15px;
-        }
-        main.contentsamping {
-            padding: 25px 20px;
-            border-radius: 15px;
-        }
-        h1 {
-            font-size: 2rem;
-            letter-spacing: 1.5px;
-        }
-        img {
-            border-radius: 12px;
-        }
-        .map-container {
-            height: 280px;
-        }
-        }
-    </style>
-    </head>
-    <body>
-    <main class="contentsamping" role="main">
-        <h1>🍜 Sejarah & Informasi Lengkap Beef Noodle Soup</h1>
-        <img src="beef.jpeg" alt="Beef Noodle Soup" />
-        <h2>🥢 Sejarah & Latar Belakang</h2>
-        <p><strong>Beef Noodle Soup</strong> (牛肉麵 - <em>Niúròu Miàn</em>) adalah hidangan ikonik dari Taiwan, meskipun asal-usulnya berasal dari daratan Tiongkok. Hidangan ini merupakan perpaduan antara kuliner etnis Hui Muslim dari Tiongkok barat laut dan cita rasa lokal Taiwan.</p>
-        <ul>
-        <li><strong>Asal mula:</strong> Dipengaruhi oleh <em>Lanzhou Lamian</em> dari komunitas Muslim Hui.</li>
-        <li><strong>Perkembangan:</strong> Versi khas Taiwan berkembang setelah migrasi besar dari Tiongkok ke Taiwan pasca 1949.</li>
-        <li><strong>Versi populer:</strong> <em>Hong Shao Niu Rou Mian</em> (紅燒牛肉麵) dengan kuah merah berempah.</li>
-        </ul>
+    <link rel="stylesheet" href="sejarah.css">
+</head>
+<body>
+<iframe src="navbar.html"
+    style="width: 100%;"
+    scrolling="no"
+    title="Navbar"
+    class="navbar">
+</iframe>
+<main class="contentsamping" role="main">
+    <h1>🐔 Sejarah & Informasi Lengkap Drunken Chicken (醉雞)</h1>
+    <img src="drunken.jpeg" alt="Drunken Chicken Taiwan" />
+    
+    <h2>📜 Sejarah & Latar Belakang</h2>
+    <p><strong>Drunken Chicken</strong> (醉雞 - <em>Zuì Jī</em>) adalah hidangan klasik yang berasal dari Tiongkok, namun telah menjadi bagian penting dalam kuliner Taiwan. Hidangan ini menggunakan teknik merendam ayam dalam <em>Shaoxing wine</em> agar dagingnya harum dan kaya rasa.</p>
+    <ul>
+        <li><strong>Asal mula:</strong> Berakar dari kuliner Jiangnan, kemudian populer di Taiwan terutama sebagai makanan pembuka dingin.</li>
+        <li><strong>Metode penyajian:</strong> Ayam dikukus atau direbus, lalu direndam dalam campuran anggur beras, kaldu, dan rempah selama semalaman.</li>
+        <li><strong>Tekstur & rasa:</strong> Dingin, lembut, sedikit manis dan alkoholik.</li>
+    </ul>
 
-        <h2>🧧 Tradisi & Penggunaan Budaya</h2>
-        <p>Meskipun bukan makanan untuk hari raya tertentu, Beef Noodle Soup adalah simbol kehangatan dan makanan sehari-hari yang populer.</p>
-        <ul>
-        <li>Disajikan saat cuaca dingin atau acara keluarga.</li>
-        <li>Setiap tahun diadakan <strong>Taipei International Beef Noodle Festival</strong>.</li>
-        <li>Dianggap sebagai kebanggaan kuliner nasional Taiwan.</li>
-        </ul>
+    <h2>🎎 Budaya & Tradisi Penyajian</h2>
+    <p>Di Taiwan, Drunken Chicken sering disajikan dalam acara khusus atau di restoran tradisional Tiongkok sebagai bagian dari hidangan <em>banquet</em>.</p>
+    <ul>
+        <li>Umumnya disajikan dingin sebagai appetizer.</li>
+        <li>Dipandang sebagai hidangan elegan dan mewah.</li>
+        <li>Kadang dikombinasikan dengan goji berry atau jamur hitam untuk menambah nilai gizi dan estetika.</li>
+    </ul>
 
-        <h2>🍜 Kandungan & Komposisi</h2>
-        <p>Beef Noodle Soup kaya akan rasa dan gizi:</p>
-        <h3>Bahan Utama:</h3>
-        <ul>
-        <li>Daging sapi (brisket, tendon, shank)</li>
-        <li>Mi gandum (tebal atau mi tarik tangan)</li>
-        <li>Kaldu rempah (kecap asin, jahe, bawang putih, star anise, dll)</li>
-        <li>Pelengkap: sayur asin, daun bawang, minyak cabai</li>
-        </ul>
-        <h3>Informasi Gizi (rata-rata per porsi):</h3>
-        <ul>
-        <li><strong>Kalori:</strong> ±500–700 kkal</li>
-        <li><strong>Protein:</strong> 30–40g</li>
-        <li><strong>Lemak:</strong> 20–30g</li>
-        <li><strong>Karbohidrat:</strong> 50–70g</li>
-        <li><strong>Sodium:</strong> Tinggi (karena kuah berbumbu)</li>
-        </ul>
-        <h2>Resep Cara Membuat:</h2>
-        <p>Kami telah menyediakan Resep" terbaik dan Cara membuatnya untuk para BUnda" sekalian bisa kunjungi Web Site Kami dengan click <a href="beef_noodle.html">disini</a> </p>
-        <h2>📍 Rekomendasi Tempat di Taiwan</h2>
-        <ol>
-        <li><strong>Yong Kang Beef Noodle (永康牛肉麵)</strong> – Taipei</li>
-        <li><strong>Lao Zhang Beef Noodles (老張牛肉麵)</strong> – Taipei</li>
-        <li><strong>Lin Dong Fang Beef Noodle (林東芳牛肉麵)</strong> – Taipei</li>
-        <li><strong>San Shan Xiao Guan (三商巧福)</strong> – Tersedia di banyak lokasi</li>
-        </ol>
-        <div class="map-container" aria-label="Map location of Yong Kang Beef Noodle">
-        <iframe 
-            src="https://maps.google.com/maps?q=No.+17%E8%99%9F%2C+Lane+31%2C+Section+2%2C+Jinshan+S+Rd%2C+Da%E2%80%99an+District%2C+Taipei+City%2C+Taiwan+106&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Yong Kang Beef Noodle">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Lao Zhang Beef Noodles">
-        <iframe
-            src="https://maps.google.com/maps?q=No.+93%E8%99%9F%2C+Section+1%2C+Hangzhou+S+Rd%2C+Zhongzheng+District%2C+Taipei+City%2C+Taiwan+100&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Lao Zhang Beef Noodles">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Lin Dong Fang Beef Noodle">
-        <iframe
-            src="https://maps.google.com/maps?q=No.+322%E8%99%9F%2C+Section+2%2C+Bade+Rd%2C+Zhongshan+District%2C+Taipei+City%2C+Taiwan+104&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade" title="Map location of Lin Dong Fang Beef Noodle">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of San Shan Xiao Guan in Taiwan">
-        <iframe
-            src="https://maps.google.com/maps?q=114%2C+Taiwan%2C+Taipei+City%2C+Neihu+District&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of San Shan Xiao Guan">
-        </iframe>
-        </div>
+    <h2>🥢 Bahan & Informasi Gizi</h2>
+    <h3>Bahan Utama:</h3>
+    <ul>
+        <li>Dada ayam atau paha ayam tanpa tulang</li>
+        <li>Anggur Shaoxing (Chinese yellow wine)</li>
+        <li>Kaldu ayam</li>
+        <li>Jahe, bawang putih, garam, gula</li>
+        <li>Opsional: goji berry, jamur, daun bawang</li>
+    </ul>
 
-        <h2>Rekomendasi Tempat di Indonesia</h2>
-        <h3>Jakarta:</h3>
-        <ul>
-        <li><strong>Bubur Kwang Tung</strong> – Pecenongan</li>
-        <li><strong>Imperial Treasure Lamian</strong> – Mall Indonesia</li>
-        <li><strong>Din Tai Fung</strong> – Plaza Senayan, Grand Indonesia</li>
-        <li><strong>Gokana Ramen & Teppan</strong> – Beberapa cabang</li>
-        </ul>
+    <h3>Informasi Gizi (rata-rata per porsi):</h3>
+    <ul>
+        <li><strong>Kalori:</strong> ±300–400 kkal</li>
+        <li><strong>Protein:</strong> 30–35g</li>
+        <li><strong>Lemak:</strong> 15–20g</li>
+        <li><strong>Karbohidrat:</strong> 2–5g (rendah)</li>
+        <li><strong>Alkohol:</strong> Umumnya sangat sedikit tersisa karena proses perendaman dan pendinginan</li>
+    </ul>
 
-        <div class="map-container" aria-label="Map location of Bubur Kwang Tung, Jakarta">
-        <iframe
-            src="https://maps.google.com/maps?q=Pecenongan+St+No.67I%2C+Kebon+Kelapa%2C+Gambir%2C+Central+Jakarta+City%2C+Jakarta+10120&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Bubur Kwang Tung Jakarta">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Imperial Treasure Lamian in Mall Indonesia, Jakarta">
-        <iframe
-            src="https://maps.google.com/maps?q=Jl.+M.H.+Thamrin+No.28-30+9%2C+RT.9%2FRW.5%2C+Gondangdia%2C+Kec.+Menteng%2C+Kota+Jakarta+Pusat%2C+Daerah+Khusus+Ibukota+Jakarta+10350&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Imperial Treasure Lamian Jakarta">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Din Tai Fung, Plaza Senayan and Grand Indonesia, Jakarta">
-        <iframe
-            src="https://maps.google.com/maps?q=3rd+Level%2C+Plaza+Jl.+Asia+Afrika+No.8+Unit+318C%2C+Senayan%2C+Kecamatan+Tanah+Abang%2C+Jakarta%2C+Daerah+Khusus+Ibukota+Jakarta+10270&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Din Tai Fung Jakarta">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Gokana Ramen & Teppan branches, Jakarta">
-        <iframe
-            src="https://maps.google.com/maps?q=Plaza+Bl.+M%2C+Jl.+Bulungan+No.76+Blok+M+Lt.5%2C+RT.6%2FRW.6%2C+Kramat+Pela%2C+Kec.+Kby.+Baru%2C+Kota+Jakarta+Selatan%2C+Daerah+Khusus+Ibukota+Jakarta+12130&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Gokana Ramen & Teppan Jakarta">
-        </iframe>
-        </div>
+    <h2>📖 Resep & Cara Membuat:</h2>
+    <p>Kami menyediakan resep autentik Drunken Chicken dengan teknik marinasi yang benar. Klik <a href="drunken_chicken.html">di sini</a> untuk lihat resep lengkap!</p>
 
-        <h3>Bandung:</h3>
-        <ul>
-        <li><strong>Waroeng Taiwan 88</strong> – Cihampelas</li>
-        <li><strong>Hana Ramen</strong> – PVJ Mall</li>
-        </ul>
-        <div class="map-container" aria-label="Map location of Waroeng Taiwan 88, Cihampelas, Bandung">
-        <iframe
-            src="https://maps.google.com/maps?q=Ta+Wan+-+Cihampelas+Walk&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Waroeng Taiwan 88 Bandung">
-        </iframe>
-        </div>
-        <div class="map-container" aria-label="Map location of Hana Ramen, PVJ Mall, Bandung">
-        <iframe
-            src="https://maps.google.com/maps?q=Jl.+Sukajadi%2C+Cipedes%2C+Kec.+Sukajadi%2C+Kota+Bandung%2C+Jawa+Barat+40161&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map location of Hana Ramen Bandung">
-        </iframe>
-        </div>
-    </main>
-    </body>
-    </html>
+    <h2>📍 Rekomendasi Tempat di Taiwan</h2>
+    <ol>
+        <li><strong>Dintaifung (鼎泰豐) ⭐️⭐️⭐️⭐️⭐️</strong> – Banyak cabang di Taipei</li>
+        <li><strong>Shin Yeh Restaurant (欣葉台菜) ⭐️⭐️⭐️⭐️⭐️</strong> – Taipei</li>
+        <li><strong>Silks Palace at National Palace Museum ⭐️⭐️⭐️⭐️</strong> – Taipei</li>
+    </ol>
+
+    <h2>📍 Rekomendasi Tempat di Indonesia</h2>
+    <h3>Jakarta:</h3>
+    <ul>
+        <li><strong>Din Tai Fung ⭐️⭐️⭐️⭐️⭐️</strong> – Grand Indonesia, Plaza Senayan</li>
+        <li><strong>May Star ⭐️⭐️⭐️⭐️</strong> – Central Park, Lotte Avenue</li>
+        <li><strong>Imperial Treasure ⭐️⭐️⭐️</strong> – Mall Indonesia</li>
+    </ul>
+
+    <h3>Bandung:</h3>
+    <ul>
+        <li><strong>Eastern Oriental ⭐️⭐️⭐️⭐️⭐️</strong> – Trans Studio Mall</li>
+        <li><strong>Dragon Hot Pot ⭐️⭐️⭐️⭐️</strong> – PVJ Mall</li>
+    </ul>
+</main>
+
+</body>
+</html>
