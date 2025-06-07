@@ -4,46 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top 5 Taiwan Foods</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
     <link rel="stylesheet" href="home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <audio src="your_phone_linging.mp3" autoplay="autoplay" type="audio/mp3"></audio>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="top-menu">
           <div class="logo-container">
             <a href="app.html?page=home" class="logo">
               <img src="assets/icons/logo.png" alt="Logo" />
-              <p>Top 5 Taiwan Foods</p>
               <p class="page-title"></p>
             </a>
           </div>
-          <div class="menu-wrapper">
-            <img src="assets/icons/menu.svg" alt="Toggle Mode" class="toggle-dark-mode" />
-            <img src="assets/icons/menu.svg" alt="Menu" class="toggle-navbar" />
-          </div>
         </div>
         <nav class="navbar">
-          <ul>
-            <li><a href="app.html?page=home">Home</a></li>
-            <li><a href="app.html?page=about">About Us</a></li>
-            <li><a href="app.html?page=contact">Contact Us</a></li>
-            <li><a href="app.html?page=list">List Menu</a></li>
-            <li><a href="app.html?page=foods">Foods</a></li>
-            <li><a href="app.html?page=drinks">Drinks</a></li>
-            <li><a href="index.html" class="logout-button">Logout</a></li>
-          </ul>
+          <a href="app.html?page=beranda">Beranda</a>
+          <a href="detail/detail.html">Detail</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resep</button>
+            <div class="dropdown-content">
+              <a href="resep/Beef-Noodles.html">Beef Noodles</a>
+              <a href="resep/Drunken.html">Drunken Chicken</a>
+              <a href="resep/Minced.html">Minced Pork Rice</a>
+              <a href="resep/slender.html">Slender Noodles with Oysters</a>
+              <a href="resep/Soup.html">Soup Dumplings</a>
+            </div>
+          </div>
+          <a href="aboutus/about_us.html">About Us</a>
+          <a href="/contact us/contactus.html">Contact Us</a>
         </nav>
       </div>
+      <div class="desain_main">
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+      </div>
     </header>
-    <div class="content"></div>
+    <section class="hero">
+      <div class="container">
+        <h1>Selamat datang di Top 5 Taiwan Foods!</h1>
+        <p>Temukan berbagai makanan favoritmu di sini</p>
+      </div>
+    </section>
+    <div class="desain_main" id="red">
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+        <img src="assets\icons/taiwan_food.html Assets/1.png" alt="desain" class="desain1" />
+      </div>
+
+    <div class="main">
+      <section class="food-section">
+        <div class="section-header">
+          <h2>Makanan Taiwan Populer</h2>
+          <p>Temukan kelezatan masakan Taiwan terbaik</p>
+        </div>
+        
+        <div class="food-container">
+          <div class="food-item">
+            <img src="resep/img-resep/Beef-Noodles.jpg" alt="Beef Noodles">
+            <div class="food-item-content">
+              <h3>Beef Noodles</h3>
+              <p>Mie kuah dengan daging sapi yang lembut, disajikan dalam kuah yang kaya rasa. Hidangan ini merupakan salah satu makanan nasional Taiwan yang paling terkenal.</p>
+              <p>Daging sapi yang empuk dimasak dalam waktu lama dengan berbagai rempah tradisional Taiwan, menghasilkan cita rasa yang mendalam dan memorable.</p>
+            </div>
+          </div>
+
+          <div class="food-item">
+            <img src="resep/img-resep/R01122_Drunken_Chicken_Cold_Dish.jpg" alt="Drunken Chicken">
+            <div class="food-item-content">
+              <h3>Drunken Chicken</h3>
+              <p>Ayam yang direndam dalam wine beras Chinese, menciptakan rasa yang unik dan memikat. Tekstur ayam yang lembut berpadu dengan aroma wine yang khas.</p>
+              <p>Hidangan ini disajikan dingin, sempurna sebagai hidangan pembuka atau makanan ringan di siang hari.</p>
+            </div>
+          </div>
+
+          <div class="food-item">
+            <img src="resep/img-resep/Soup-Dumplings.jpg" alt="Soup Dumplings">
+            <div class="food-item-content">
+              <h3>Soup Dumplings</h3>
+              <p>Dimsum khas Taiwan dengan kuah di dalamnya. Setiap gigitan akan menghadirkan ledakan rasa yang mengejutkan dan menyenangkan.</p>
+              <p>Dibuat dengan teknik khusus untuk menjebak kuah di dalam pangsit, menciptakan pengalaman makan yang unik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section class="quote-section">
+        <div class="quote-content">
+          <blockquote>
+            "Makanan Taiwan adalah perpaduan sempurna antara tradisi dan inovasi, menciptakan pengalaman kuliner yang tak terlupakan"
+          </blockquote>
+          <p>Jelajahi berbagai pilihan makanan Taiwan bersama kami</p>
+        </div>
+      </section>
+      
+      <div class="footer">
+          <img src="assets\icons/taiwan_food.html Assets/ddd (1200 x 600 piksel) (900 x 100 piksel).png" alt="footer-image">
+      </div>
+    </div>
     <footer>
       <div class="container">
         <p>&copy; 2025 Top 5 Taiwan Foods. All Rights Reserved.</p>

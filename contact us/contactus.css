@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #d2b71c;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+/* ------------------------ */
+
+header {
+  background-color: #AA0114;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 25px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.logo img {
+  height: 4rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: content-box;
+}  
+.desain_main{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.desain_main img{
+  width: 25%;
+  height: 25%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: #FFD700;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #AA0114;
+  padding: 0 1rem;
+}
+
+.navbar a, .dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover, .dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA0114;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --------------------- */
+
+.container2 {
+  background: #fff;
+  padding: 25px 30px;
+  padding-right: 50px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+button {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #218838;
+}
+
+img{
+  width: 50px;
+}
