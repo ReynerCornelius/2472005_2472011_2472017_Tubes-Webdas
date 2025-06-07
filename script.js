@@ -26,36 +26,11 @@ if (kontenElemen) {
   var isi = kontenElemen.innerHTML;
   var isiDibalik = isi.split("").reverse().join("");
   kontenElemen.innerHTML = isiDibalik;
-}
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  showPage();
-  // Dark mode dasar
-  var badan = document.body;
-  var tombolToggle = document.querySelector('.toggle-dark-mode');
-  var modeGelap = localStorage.getItem('darkMode');
-  if (modeGelap === 'true') {
-    badan.classList.add('dark');
-    if (tombolToggle) tombolToggle.src = 'assets/icons/light-mode.svg';
-  } else {
-    if (tombolToggle) tombolToggle.src = 'assets/icons/dark-mode.svg';
-  }
-  if (tombolToggle) {
-    tombolToggle.addEventListener('click', function() {
-      badan.classList.toggle('dark');
-      var sedangGelap = badan.classList.contains('dark');
-      tombolToggle.src = sedangGelap ? 'assets/icons/light-mode.svg' : 'assets/icons/dark-mode.svg';
-      localStorage.setItem('darkMode', sedangGelap);
-    });
-  }
-});
+}};
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all sections that need animation
   const sections = document.querySelectorAll('.animate-section');
   
-  // Create Intersection Observer
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           // Add 'show' class when section is visible
