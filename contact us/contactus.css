@@ -8,6 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   background: #d2b71c;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 /* ------------------------ */
 
@@ -16,7 +18,7 @@ header {
   top: 0;
   z-index: 1;
   margin-bottom: 25px;
-
+}
 .logo {
   display: flex;
   align-items: center;
@@ -41,7 +43,6 @@ header {
 .desain_main img{
   width: 25%;
   height: 25%;
-}
 }
 .container {
   display: flex;
@@ -81,6 +82,7 @@ header {
   border: none;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
+  margin-top: 20px;
 }
 
 .dropdown-content {
