@@ -15,5 +15,4 @@ function showSlides() {
   slideIndex++;
   setTimeout(showSlides, 3000);
 }
-
 window.onload = showSlides;
