@@ -110,20 +110,9 @@ footer {
 }
 
 .hero {
-  background-image: url("taiwan_food_assets/taiwan1.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero .container {
@@ -187,7 +176,6 @@ footer {
   width: 100%;
   padding: 4rem 2rem;
   margin: 0;
-
 }
 
 .food-container {
@@ -307,66 +295,40 @@ footer .container p{
 /*---------------------------------------------------------------------------------------------*/
 
 .slideshow-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
+  max-width: 1000px;
+  height: 780px;
+  margin: auto;
+  overflow: hidden;
+  margin-left: 0px;
+  z-index: 0;
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.slide-fade {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: fade 2s ease-in-out;
 }
 
-.slide.active {
-    opacity: 1;
+.slide-fade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter:drop-shadow(2px 2px 2px 2px rgb(0, 0, 0));
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container2{
+  margin-top: 300px;
+  position: absolute;
+  text-align: center;
+  align-content: center;
+  width: 100%;
+  font-size:x-large;
+  color: #FFD700;
+  z-index: 1;
 }
-
-.slideshow-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Dots/bullets/indicators */
-.dots-container {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #FFD700;
-}
-
 /*---------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 859px) {
@@ -402,7 +364,7 @@ footer .container p{
  .desain_main {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* Kurangi gap untuk mobile */
+    gap: 1.5rem;
   }
 
   .desain_main img {
