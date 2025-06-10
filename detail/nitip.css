@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+  font-size: 1rem;  
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+header {
+  background-color: #AA0114;
+  top: 0;
+  z-index: 1;
+}
+footer {
+  text-align: center;
+  background-color: #AA0114;
+  color: #f7f7f7;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: #FFD700;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #AA0114;
+  padding: 0 1rem;
+}
+
+.navbar a, .dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover, .dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA0114;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.logo img {
+  height: 4rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: content-box;
+}
+
+.hero {
+  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ztpzkoauqruezjw1lglb/HOTEL%20MADISON%20TAIPEI%20-%20Restoran%20%26%20Bar%20Itali%20di%20MRT%20Xinyi%20Anhe.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+  position: relative;
+  height: 40rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFD700;
+}
+
+.hero .container h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 1rem #dd761c40;
+}
+
+.hero .container p {
+  text-shadow: 0 0 0.25rem #dd761c80;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.hero .hero-btn-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero .hero-btn-wrapper .btn {
+  white-space: nowrap;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+.desain_main{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.desain_main img{
+  width: 25%;
+  height: 25%;
+}
+/*---------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 859px) {
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar {
+    display: none;
+    opacity: 0;
+  }
+
+  .navbar.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .toggle-navbar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .logo p:not(.page-title) {
+    display: none;
+  }
+
+  .hero .hero-btn-wrapper {
+    flex-direction: column;
+  }
+ .desain_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Kurangi gap untuk mobile */
+  }
+
+  .desain_main img {
+    width: 25%;
+  height: 25%;
+  }
+}
