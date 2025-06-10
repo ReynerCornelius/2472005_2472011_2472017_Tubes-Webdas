@@ -1,0 +1,295 @@
+footer {
+    text-align: center;
+    background-color: #AA0114;
+    color: #f7f7f7;
+    margin-top: 20px;
+}
+.containerf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    color: #FFD700;
+}
+.navbar {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    border: none;
+    z-index: 9999;
+}
+body {
+    color: #5a3e2b;
+    line-height: 1.6;
+    background-image: url('wood.jpg');
+    background-repeat: repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.head {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display: grid;
+    justify-content: center;
+}
+.head h1 {
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+    margin-top: 10px;
+    font-size: 70px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px black;
+}
+.head p {
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+.button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #de8478;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+}
+.button button:hover {
+    background-color: #c6705f;
+}
+main.contentsamping {
+    max-width: 900px;
+    margin: 50px auto 0;
+    background: #fff6e8;
+    border-radius: 15px;
+    padding: 25px 35px;
+    box-shadow: 0 8px 16px rgba(201, 129, 62, 0.3);
+}
+section {
+    margin-bottom: 25px;
+}
+h2 {
+    border-bottom: 2px solid #de8478;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: #5a3e2b;
+}
+p {
+    font-size: 16px;
+    color: #5a3e2b;
+    text-align: justify;
+}
+#foodCarousel {
+    max-width: 600px;
+    margin: 40px auto 60px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    background: #fff6e8;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #de8478;
+}
+.carousel-inner {
+    border-radius: 15px;
+}
+.carousel-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+.carousel-item img {
+    max-height: 350px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+.carousel-item img:hover {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(222, 132, 120, 0.85);
+    border-radius: 10px;
+    padding: 15px 25px;
+    max-width: 90%;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+.carousel-caption h5 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px #3b1e12;
+}
+.carousel-caption p {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    max-height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.carousel-caption a.btn {
+    margin-top: 8px;
+    color: #de8478;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+.carousel-caption a.btn:hover {
+    background-color: #c6705f;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(222, 132, 120, 0.85);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    border: 2px solid white;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #c6705f;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #999;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #eaeaea;
+}
+.section {
+    margin-bottom: 40px;
+}
+.dish-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+div p {
+    color: #fff6e8;
+}
+.tabh {
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    color: #5a3e2b;
+    border-bottom: 2px solid #de8478;
+}
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px black;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    .slide {
+        width: 100%;
+    }
+    #foodCarousel {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    .carousel-caption p {
+        max-height: none;
+    }
+}
+.review {
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 5px solid;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.quote {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #555;
+  margin: 0 0 10px 0;
+}
+.reviewer {
+  font-weight: bold;
+  color: #222;
+  margin: 0 0 5px 0;
+}
+.comment {
+  color: #666;
+  margin: 0;
+}
+.review-maudy {
+  border-color: #ff5a5f;
+}
+.review-reza {
+  border-color: #00aaff;
+}
+.review-luna {
+  border-color: #ff66cc;
+}
+.review-iqbaal {
+  border-color: #ff9933;
+}
+.review-deddy {
+  border-color: #4caf50;
+}
