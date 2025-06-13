@@ -1,3 +1,14 @@
+function showContactForm() {
+  const envelope = document.getElementById("envelope");
+  const contactForm = document.getElementById("contactFormContainer");
+
+  envelope.classList.add("open");
+  setTimeout(() => {
+    contactForm.style.display = "block";
+    envelope.style.display = "none";
+  }, 500);
+}
+
 function sendMail() {
     let parms = {
         name: document.getElementById("name").value,
@@ -6,7 +17,7 @@ function sendMail() {
         message: document.getElementById("message").value
     };
 
-    emailjs.send("service_047prfv", "template_mr3whqe", parms)
+    emailjs.send("service_l7upkme", "template_0anygz8", parms)
         .then(function(response) {
             alert("Email sent successfully!");
             console.log("SUCCESS", response);

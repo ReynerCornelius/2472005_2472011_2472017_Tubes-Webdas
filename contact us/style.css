@@ -167,6 +167,7 @@ header {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 @keyframes fadeIn {
@@ -219,3 +220,36 @@ button {
 button:hover {
   background: #71010e;
 }
+
+/* footer */
+footer .container{
+  justify-content: center;
+  background-color: #b70000;
+}
+
+footer .container p{
+  text-align: center;
+  margin-left: 0px;
+}
+.footer{
+  width: 100%;
+  margin-bottom: -15px;
+  color: #f7f7f7;
+  background: linear-gradient(90deg,#AA0114 0%, rgb(65, 0, 0) 50%, #aa0115 100%);
+  text-align: center;
+}
+.footer img{
+  margin-left: 0px;
+}
+.quote-section {
+  padding-bottom: 30px;
+  background-color: #AA0114;
+  color: #FFD700;
+  text-align: center;
+}
+
+.quote-content p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.8rem;
+}
+
