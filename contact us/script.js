@@ -1,3 +1,14 @@
+function showContactForm() {
+  const envelope = document.getElementById("envelope");
+  const contactForm = document.getElementById("contactFormContainer");
+
+  envelope.classList.add("open");
+  setTimeout(() => {
+    contactForm.style.display = "block";
+    envelope.style.display = "none";
+  }, 500);
+}
+
 function sendMail() {
     let parms = {
         name: document.getElementById("name").value,
