@@ -170,7 +170,30 @@ footer {
   padding: 0;
 }
 
-/* Food Section */
+.lampion-container {
+  position: relative;
+  width: 100%;
+}
+
+.lamp1, .lamp2{
+  position: absolute;
+  top: -38px;
+  width: 500px;
+  z-index: 10;
+}
+.lamp1{
+  left: 0;
+}
+.lamp2{
+  right: 0;
+}
+
+
+.food-section {
+  position: relative;
+  padding: 0 520px;
+}
+
 .food-section {
   margin: 0;
   border: #AA0114 30px solid;
