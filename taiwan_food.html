@@ -64,42 +64,50 @@
       <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
       <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
     </div>
-
+    <div class="video-container">
+      <img src="taiwan_food_assets/2.png" alt="desain" class="sz">
+      <img src="taiwan_food_assets/2.png" alt="desain" class="sz">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/R0FgDaDxyDY?si=4ZAnIriGyCFyx0Qp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <img src="taiwan_food_assets/2.png" alt="desain" class="sz">
+      <img src="taiwan_food_assets/2.png" alt="desain" class="sz">
+    </div>
     <div class="main">
-      <section class="food-section">
-        <div class="lampion">
-          <div><img src="taiwan_food_assets/Lampion.png" alt="desain" class="lamp1" /></div>
-          <div><img src="taiwan_food_assets/Lampion.png" alt="desain" class="lamp2" /></div>
-        </div>
-        <div class="section-header">
-          <h2>Makanan Taiwan Populer</h2>
-          <p>Temukan kelezatan masakan Taiwan terbaik</p>
-        </div>
-        
-        <div class="food-container">
-          <div class="food-item">
-              <img src="assets/imgs/characteristics1.jpg" alt="Street Food">
-              <div class="food-content">
-                  <h3>Night Market Culture</h3>
-                  <p>Taiwan terkenal dengan budaya night market yang menawarkan berbagai makanan jalanan yang lezat</p>
-              </div>
+      <div class="isi">
+        <section class="food-section">
+          <div class="lampion">
+            <div><img src="taiwan_food_assets/Lampion.png" alt="desain" class="lamp1" /></div>
+            <div><img src="taiwan_food_assets/Lampion.png" alt="desain" class="lamp2" /></div>
           </div>
-          <div class="food-item">
-              <img src="assets/imgs/characteristics2.jpg" alt="Fresh Ingredients">
-              <div class="food-content">
-                  <h3>Bahan Segar</h3>
-                  <p>Penggunaan bahan-bahan segar dan berkualitas tinggi dalam setiap hidangan</p>
-              </div>
+          <div class="section-header">
+            <h2>Apa yang Membuat Makanan Taiwan Unik?</h2>
+            <p>Ayo Kita Coba Cari Tahu!</p>
           </div>
-          <div class="food-item">
-              <img src="assets/imgs/characteristics3.jpg" alt="Cooking Technique">
-              <div class="food-content">
-                  <h3>Teknik Memasak</h3>
-                  <p>Teknik memasak tradisional yang diwariskan dari generasi ke generasi</p>
-              </div>
+          
+          <div class="food-container">
+            <div class="food-item">
+                <img src="taiwan_food_assets/taiwan5.jpg" alt="Street Food">
+                <div class="food-content">
+                    <h3>Night Market Culture</h3>
+                    <p>Taiwan memiliki budaya night market yang sangat populer, di mana pengunjung dapat menikmati berbagai makanan jalanan otentik yang menggoda selera dalam suasana yang ramai dan penuh warna.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="taiwan_food_assets/5733051931_7770d24e02_c.jpg" alt="Fresh Ingredients">
+                <div class="food-content">
+                    <h3>Bahan Segar</h3>
+                    <p>Setiap hidangan khas Taiwan dibuat menggunakan bahan-bahan segar pilihan dengan standar kualitas tinggi, sehingga menghasilkan rasa autentik dan manfaat gizi yang optimal.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="taiwan_food_assets/image.jpg" alt="Cooking Technique">
+                <div class="food-content">
+                    <h3>Teknik Memasak</h3>
+                    <p>Teknik memasak tradisional yang digunakan dalam masakan Taiwan telah diwariskan lintas generasi, memadukan metode kuno dengan cita rasa modern yang tetap mempertahankan keasliannya.</p>
+                </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
         
       <section class="quote-section">
         <div class="quote-content">
@@ -119,7 +127,19 @@
         <p>&copy; 2025 Top 5 Taiwan Foods. All Rights Reserved.</p>
       </div>
     </footer>
+    <!-- Kontrol Musik Lonjong -->
+    <div class="music-controls">
+      <div class="music-button">
+        <span id="playPauseBtn">▶</span>
+        <div class="volume-wrapper">
+          ၊၊||၊
+          <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" src="taiwan_food_assets/backsound.mp3" loop></audio>
     <script src="script.js"></script>
-    <audio src="taiwan_food_assets/backsound.mp3" autoplay loop></audio>
   </body>
 </html>
