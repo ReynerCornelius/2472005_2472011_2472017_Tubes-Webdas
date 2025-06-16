@@ -227,6 +227,13 @@ h2 {
   h1 {
     font-size: 1.2rem;
   }
+
+  .desain1{
+    display: none;
+  }
+  .desain2{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
