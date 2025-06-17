@@ -124,6 +124,34 @@
         </iframe>
         </div>
         </ul>
+        <div class="post">
+            <h2>Beef Noodle Soup</h2>
+            <p>Jangan lupa like dan juga bagikan ke teman ataupun keluarga kalian</p>
+            <button class="tombol" id="like1">❤️ Like (0)</button>
+            <button class="share" id="tombol">🔗 Share</button>
+        </div>
     </main>
+    <script>
+        // LIKE tombol beef nopdle
+        var like1 = document.getElementById("like1");
+        var count1 = 0;
+        like1.onclick = function() {
+            count1++;
+            like1.textContent = "❤️ Like (" + count1 + ")";
+        };
+        var shareButtons = document.getElementsByClassName("share");
+        for (var j = 0; j < shareButtons.length; j++) {
+            shareButtons[j].onclick = function() {
+                var input = document.createElement("input");
+                input.value = window.location.href;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand("copy");
+                document.body.removeChild(input);
+                alert("Link berhasil disalin!");
+        };
+        }
+    </script>
+    <script src="sejarah.js"></script>
 </body>
 </html>

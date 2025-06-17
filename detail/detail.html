@@ -187,8 +187,17 @@
         <p class="reviewer">— Deddy Corbuzier, Podcaster & Public Figure</p>
         <p class="comment">“Menu-menu klasik dan modernnya saling melengkapi, cocok buat yang suka eksplorasi rasa.”</p>
         </div>
-        <button class="tulis-review"onclick="buatReview()">Tulis Review Taiwan Food Kamu!</button>
-    </section>
+        <div class="tulisreview">
+            <h2>Berikan Review Anda</h2>
+            <form id="reviewForm">
+                <input type="text" id="name" placeholder="Nama Anda" required />
+                <textarea id="comment" placeholder="Tulis komentar..." required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <button id="clearBtn">Clear Semua Review</button>
+        </div>
+        <div id="reviewsContainer" class="reviews-container"></div>
+        </section>
     <a href="#atas">Back to Top</a>
     </main>
     <footer>
@@ -198,25 +207,44 @@
     </footer>
 </body>
 <script>
-  function buatReview() {
-    const userReview = prompt("Tulis review kamu tentang Taiwan Food:");
-    if (userReview == "") {
-      alert("Ups, kamu belum menulis review apapun!");
-      return;
+    let tombolKiri = document.querySelector('.carousel-control-prev');
+    let tombolKanan = document.querySelector('.carousel-control-next');
+    window.onscroll = function () {
+        if (window.scrollY > 250) {
+        tombolKiri.style.display = "none";
+        tombolKanan.style.display = "none";
+        } else {
+        tombolKiri.style.display = "block";
+        tombolKanan.style.display = "block";
+        }
+    };
+    const form = document.getElementById("reviewForm");
+    const reviewsContainer = document.getElementById("reviewsContainer");
+    const clearBtn = document.getElementById("clearBtn");
+    let reviewCount = 0;
+    const maxReview = 10;
+    form.onsubmit = function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+    if (name && comment) {
+        if (reviewCount >= maxReview) {
+        alert("Maksimal 10 review saja.");
+        return;
+        }
+        const review = document.createElement("div");
+        review.className = "review-popup";
+        review.innerHTML =
+        `<p class="quote">"${comment}"</p>` +
+        `<p><strong>— ${name}</strong></p>`;
+        reviewsContainer.appendChild(review);
+        reviewCount++;
+        form.reset();
     }
-    alert("Terimakasih sudah menulis review: " + userReview + " Review kamu akan segera ditampilkan di halaman utama!");
-  }
-  let tombolKiri = document.querySelector('.carousel-control-prev');
-  let tombolKanan = document.querySelector('.carousel-control-next');
-  window.onscroll = function () {
-    if (window.scrollY > 250) {
-      tombolKiri.style.display = "none";
-      tombolKanan.style.display = "none";
-    } else {
-      tombolKiri.style.display = "block";
-      tombolKanan.style.display = "block";
-    }
-  };
-
+    };
+    clearBtn.onclick = function () {
+    reviewsContainer.innerHTML = "";
+    reviewCount = 0;
+    };
 </script>
 </html>

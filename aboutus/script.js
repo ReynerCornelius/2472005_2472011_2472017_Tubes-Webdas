@@ -23,3 +23,28 @@
         window.location.href = '/detail/detail.html';
         }
     });
+    window.addEventListener('message', function(event) {
+        if (event.data.action === 'minced') {
+        window.location.href = '/resep/Minced.html';
+        }
+    });
+    window.addEventListener('message', function(event) {
+        if (event.data.action === 'soup') {
+        window.location.href = '/resep/Soup.html';
+        }
+    });
+    window.addEventListener('message', function(event) {
+        if (event.data.action === 'oyster') {
+        window.location.href = '/resep/slender.html';
+        }
+    });
+    window.addEventListener('message', function(event) {
+        if (event.data.action === 'beefnoodle') {
+        window.location.href = '/resep/Beef-Noodles.html';
+        }
+    });
+    window.addEventListener('message', function(event) {
+        if (event.data.action === 'drunken') {
+        window.location.href = '/resep/Drunken.html';
+        }
+    });
