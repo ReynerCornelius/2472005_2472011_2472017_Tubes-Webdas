@@ -367,9 +367,9 @@ footer .container p{
 
 .container2{
   margin-top: 300px;
+  margin-left: -12px;
   position: absolute;
   text-align: center;
-  align-content: center;
   width: 100%;
   padding: 15px;
   background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.755) 50%, rgba(255, 255, 255, 0) 100%);
@@ -425,13 +425,22 @@ footer .container p{
   opacity: 1;
 }
 
+.menu-toggle {
+  display: none;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
 /*---------------------------------------------------------------------------------------------*/
 
 /* 1. Untuk layar kecil dan tablet (600px ke bawah) */
 @media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
-    padding: 1rem;
   }
 
   .music-button {
@@ -474,10 +483,16 @@ footer .container p{
     font-size: 1rem;
     padding: 10px;
   }
+  .lamp1, .lamp2{
+    display: none;
+  }
+  .sz{
+    display: none;
+  }
 }
 
 /* 2. Untuk layar sangat kecil (425px ke bawah) */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 599px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -503,9 +518,39 @@ footer .container p{
   .desain1{
     display:none;
   }
+  .lamp1, .lamp2{
+    display: none;
+  }
+  .sz{
+    display: none;
+  }
+}  
+
+@media screen and (max-width: 1440px) {
+  .lamp1, .lamp2{
+    display: none;
+  }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1024px) {
+  .sz{
+    display: none;
+  }
+}
+@media screen and (max-width: 599px) {
   .music-controls {
     z-index: 1;
+  }
+  .menu-toggle {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar.show {
+    display: flex;
   }
 }

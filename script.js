@@ -58,3 +58,8 @@ playPauseBtn.addEventListener("click", function () {
 volumeControl.addEventListener("input", function () {
   audio.volume = volumeControl.value;
 });
+
+function toggleNavbar() {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("show");
+}
