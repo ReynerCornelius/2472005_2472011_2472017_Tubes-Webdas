@@ -101,6 +101,38 @@ img {
 img:hover {
     transform: scale(1.05);
 }
+.post {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.tombol {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#tombol {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.like {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.share {
+    background-color: #3498db;
+    color: white;
+}
 .map-container {
     position: relative;
     border-radius: 15px;
@@ -121,6 +153,7 @@ body {
     padding: 20px 15px;
 }
 main.contentsamping {
+    padding-top: 150px;
     padding: 25px 20px;
     border-radius: 15px;
 }
@@ -134,4 +167,99 @@ img {
 .map-container {
     height: 280px;
 }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 130px;
+    }
+}
+@media screen and (max-width: 768px) {
+  main.contentsamping {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .map-container {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  main.contentsamping {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  p, li {
+    font-size: 0.85rem;
+  }
+
+  iframe {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main.contentsamping {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  p, li {
+    font-size: 0.8rem;
+  }
+
+  iframe {
+    height: 160px;
+  }
 }
