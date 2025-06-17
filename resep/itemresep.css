@@ -17,7 +17,7 @@ header {
   position: relative;
   z-index: 10;
   background-color: #AA0114;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }
 
 .logo {
@@ -213,6 +213,85 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+
+  .desain_main {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .desain_main img {
+    width: 45%;
+    height: auto;
+  }
+
+  .container2 {
+    width: 90%;
+    padding: 15px;
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+  }
+
+  .hias2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar a, .dropbtn {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .logo img {
+    height: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a, .dropbtn {
+    font-size: 11px;
+    padding: 5px 6px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+=======
 /* 2. Untuk layar sangat kecil (425px ke bawah) */
 @media screen and (max-width: 450px) {
   .container {
