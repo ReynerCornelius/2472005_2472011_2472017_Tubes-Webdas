@@ -27,3 +27,8 @@ function sendMail() {
             console.error("FAILED", error);
         });
 }
+
+function toggleNavbar() {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("show");
+}

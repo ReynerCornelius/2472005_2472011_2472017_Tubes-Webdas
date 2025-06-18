@@ -2,21 +2,51 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sejarah Slender Noodle</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="sejarah.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/css/sejarah.css">
+    <script src="/javascript/sejarah.js"></script>
 </head>
 <body>
-    <iframe src="navbar.html"
-        style="width: 100%;"
-        scrolling="no"
-        title="Navbar"
-        class="navbar">
-    </iframe>
+    <header class="heding">
+      <div class="kontolner">
+        <div class="top-menu">
+          <div class="log-container">
+            <div class="log">
+              <img src="assets/icons/logo.png" alt="Logo" />
+              <p class="page-title"></p>
+            </div>
+          </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleNavbar()">☰</button>
+        <nav class="navbar">
+          <a href="taiwan_food.html">Beranda</a>
+          <a href="detail.html">Detail</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resep</button>
+            <div class="dropdown-content">
+              <a href="Beef-Noodles.html">Beef Noodles</a>
+              <a href="Drunken.html">Drunken Chicken</a>
+              <a href="Minced.html">Minced Pork Rice</a>
+              <a href="slender.html">Slender Noodles with Oysters</a>
+              <a href="Soup.html">Soup Dumplings</a>
+            </div>
+          </div>
+          <a href="about_us.html">About Us</a>
+          <a href="contact us.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="desain_main">
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+      </div>
+    </header>
     <main class="contentsamping" role="main">
         <h1>🍲 Sejarah & Informasi Lengkap Slender Noodles with Oysters (Oyster Vermicelli)</h1>
-        <img src="slender.jpeg" alt="Oyster Vermicelli" />
+        <img class="memek" src="/detail/slender.jpeg" alt="Oyster Vermicelli" />
         
         <h2>📜 Sejarah & Latar Belakang</h2>
         <p><strong>Oyster Vermicelli</strong> (蚵仔麵線 - <em>Ô-á mī-sòaⁿ</em>) adalah makanan jalanan legendaris asal Taiwan. Hidangan ini berasal dari daerah pesisir Taiwan seperti Tamsui dan Keelung, yang kaya hasil laut.</p>
@@ -54,26 +84,43 @@
         <h2>📖 Resep & Cara Membuat:</h2>
         <p>Kami menyediakan panduan membuat Oyster Vermicelli khas Taiwan. Klik <a href="/resep/slender.html">di sini</a> untuk melihat resep lengkap!</p>
 
-        <h2>📍 Rekomendasi Tempat di Taiwan</h2>
-        <ol>
-            <li><strong>Ay-Chung Flour-Rice Noodle (阿宗麵線) ⭐️⭐️⭐️⭐️⭐️</strong> – Ximending, Taipei</li>
-            <li><strong>Tamsui Old Street Vendors ⭐️⭐️⭐️⭐️</strong> – New Taipei</li>
-            <li><strong>Keelung Miaokou Night Market ⭐️⭐️⭐️</strong> – Keelung</li>
-            <li><strong>Shilin Night Market ⭐️⭐️⭐️</strong> – Taipei</li>
-        </ol>
-
         <h2>📍 Rekomendasi Tempat di Indonesia</h2>
         <h3>Jakarta:</h3>
         <ul>
-            <li><strong>Little Taipei ⭐️⭐️⭐️⭐️⭐️</strong> – PIK</li>
-            <li><strong>Eat Taipei ⭐️⭐️⭐️⭐️</strong> – Kelapa Gading</li>
-            <li><strong>Din Tai Fung ⭐️⭐️⭐️</strong> – Grand Indonesia (terkadang punya seasonal menu)</li>
+        <li><strong>Din Tai Fung ⭐️⭐️⭐️⭐️</strong> – Plaza Senayan, Grand Indonesia</li>
+        <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=Pantjoran+PIK%2C+Unit+D-02+Kawasan+Pantai+Maju+%2C+The+Golf+Island+Boulevard%2C+Jakarta+14470&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+        </div>
+        <li><strong>Paradise Dynasty ⭐️⭐️⭐️</strong> – Plaza Senayan, PIK Avenue</li>
+        <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=Letjen+S.+Parman+St+No.28%2C+RT.9%2FRW.5%2C+South+Tanjung+Duren%2C+Grogol+petamburan%2C+West+Jakarta+City%2C+Jakarta+11470&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+        </div>
+        <li><strong>Crystal Jade ⭐️⭐️⭐️</strong> – Grand Indonesia</li>
+        <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=636+5th+Ave%2C+New+York&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+        </div>
         </ul>
 
         <h3>Bandung:</h3>
         <ul>
-            <li><strong>Waroeng Taiwan 88 ⭐️⭐️⭐️⭐️</strong> – Cihampelas</li>
-            <li><strong>Yum Cha! ⭐️⭐️⭐️</strong> – Dago Atas</li>
+        <li><strong>Dim Sum Inc. ⭐️⭐️⭐️⭐️</strong> – Cihampelas</li>
+        <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=Plaza+Festival%2C+Jl.+H.+R.+Rasuna+Said+No.22+Lantai+Dasar%2C+RT.2%2FRW.5%2C+Karet+Kuningan%2C+Kecamatan+Setiabudi%2C+Kota+Jakarta+Selatan%2C+Daerah+Khusus+Ibukota+Jakarta+12920&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+        </div>
+        <li><strong>Fang Dimsum & Noodles Bar ⭐️⭐️⭐️</strong> – Paris Van Java (PVJ)</li>
+        <div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=Grand+Tjokro%2C+Jl.+Cihampelas+No.211+-+217%2C+Cipaganti%2C+Kecamatan+Coblong%2C+Kota+Bandung%2C+Jawa+Barat+40131&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+        </div>
         </ul>
         <div class="post">
             <h2>Slender Oyster Noodle</h2>

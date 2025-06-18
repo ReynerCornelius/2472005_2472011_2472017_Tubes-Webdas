@@ -493,6 +493,9 @@ footer .container p{
 
 /* 2. Untuk layar sangat kecil (425px ke bawah) */
 @media screen and (max-width: 599px) {
+  h2 {
+    font-size: 1.0rem;
+  }
   .container {
     flex-direction: column;
     align-items: center;

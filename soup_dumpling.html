@@ -2,21 +2,51 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sejarah Soup Dumpling</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="sejarah.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/css/sejarah.css">
+    <script src="/javascript/sejarah.js"></script>
 </head>
 <body>
-    <iframe src="navbar.html"
-        style="width: 100%;"
-        scrolling="no"
-        title="Navbar"
-        class="navbar">
-    </iframe>
+    <header class="heding">
+      <div class="kontolner">
+        <div class="top-menu">
+          <div class="log-container">
+            <div class="log">
+              <img src="assets/icons/logo.png" alt="Logo" />
+              <p class="page-title"></p>
+            </div>
+          </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleNavbar()">☰</button>
+        <nav class="navbar">
+          <a href="taiwan_food.html">Beranda</a>
+          <a href="detail.html">Detail</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resep</button>
+            <div class="dropdown-content">
+              <a href="Beef-Noodles.html">Beef Noodles</a>
+              <a href="Drunken.html">Drunken Chicken</a>
+              <a href="Minced.html">Minced Pork Rice</a>
+              <a href="slender.html">Slender Noodles with Oysters</a>
+              <a href="Soup.html">Soup Dumplings</a>
+            </div>
+          </div>
+          <a href="about_us.html">About Us</a>
+          <a href="contact us.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="desain_main">
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+      </div>
+    </header>
     <main class="contentsamping" role="main">
         <h1>🥟 Sejarah & Informasi Lengkap Soup Dumpling (Xiao Long Bao)</h1>
-        <img src="dumpling.jpeg" alt="Soup Dumpling" />
+        <img class="memek" src="/detail/dumpling.jpeg" alt="Soup Dumpling" />
         
         <h2>🥢 Sejarah & Latar Belakang</h2>
         <p><strong>Soup Dumpling</strong> (小籠包 - <em>Xiǎolóngbāo</em>) adalah pangsit kukus berisi kaldu yang berasal dari wilayah Jiangnan, khususnya Shanghai. Hidangan ini kini menjadi ikon kuliner Taiwan, terutama melalui restoran terkenal seperti Din Tai Fung.</p>

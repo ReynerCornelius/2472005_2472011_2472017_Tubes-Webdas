@@ -4,45 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Top 5 Taiwan Foods</title>
-  <link rel="stylesheet" href="about_us.css" />
+  <link rel="stylesheet" href="/css/about_us.css" />
 </head>
 <body>
-  <iframe src="navbar.html"
-        style="width: 100%;"
-        scrolling="no"
-        title="Navbar"
-        class="navbar">
-    </iframe>
+    <header class="heding">
+      <div class="kontolner">
+        <div class="top-menu">
+          <div class="log-container">
+            <div class="log">
+              <img src="assets/icons/logo.png" alt="Logo" />
+              <p class="page-title"></p>
+            </div>
+          </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleNavbar()">☰</button>
+        <nav class="navbar">
+          <a href="taiwan_food.html">Beranda</a>
+          <a href="detail.html">Detail</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resep</button>
+            <div class="dropdown-content">
+              <a href="Beef-Noodles.html">Beef Noodles</a>
+              <a href="Drunken.html">Drunken Chicken</a>
+              <a href="Minced.html">Minced Pork Rice</a>
+              <a href="slender.html">Slender Noodles with Oysters</a>
+              <a href="Soup.html">Soup Dumplings</a>
+            </div>
+          </div>
+          <a href="about_us.html">About Us</a>
+          <a href="contact us.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="desain_main">
+        <img src="/taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="/taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="/taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="/taiwan_food_assets/1.png" alt="desain" class="desain1" />
+      </div>
+    </header>
     <main class="about">
         <h1>About Us</h1>
         <p>Kami adalah tim mahasiswa yang membuat situs "Top 5 Taiwan Foods" untuk 
         memperkenalkan makanan Taiwan melalui Website yang telah kami buat.</p>
         <div class="team">
         <div class="item">
-            <img src="reyner.jpeg" alt="Reyner Cornelius">
+            <img src="aboutus/reyner.jpeg" alt="Reyner Cornelius">
             <h3>Reyner Cornelius</h3>
             <div class="sosmed">
-            <a href="https://instagram.com/reyner_cs" target="blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://github.com/ReynerCornelius" target="blank"><img src="github.png" alt="GitHub"></a>
-            <a href="https://wa.me/0881023022806" target="blank"><img src="whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://instagram.com/reyner_cs" target="blank"><img src="/aboutus/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/ReynerCornelius" target="blank"><img src="aboutus/github.png" alt="GitHub"></a>
+            <a href="https://wa.me/0881023022806" target="blank"><img src="/aboutus/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="item">
-            <img id="minic" src="dominic.jpeg" alt="Dominic Xaviera">
+            <img id="minic" src="/aboutus/dominic.jpeg" alt="Dominic Xaviera">
             <h3>Dominic Xaviera</h3>
             <div class="sosmed">
-            <a href="https://www.instagram.com/nicxod?igsh=M2R4MGp5OGx5N3U2" target="blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://github.com/DominicXv3" target="blank"><img src="github.png" alt="GitHub"></a>
-            <a href="https://wa.me/081218826956" target="blank"><img src="whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/nicxod?igsh=M2R4MGp5OGx5N3U2" target="blank"><img src="/aboutus/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/DominicXv3" target="blank"><img src="/aboutus/github.png" alt="GitHub"></a>
+            <a href="https://wa.me/081218826956" target="blank"><img src="/aboutus/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         <div class="item">
-            <img id="riko" src="ricko.jpeg" alt="Ricko">
+            <img id="riko" src="/aboutus/ricko.jpeg" alt="Ricko">
             <h3>Ricko</h3>
             <div class="sosmed">
-            <a href="https://www.instagram.com/57ricko?igsh=MWgxbTRueGl6eGZweQ==" target="blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://github.com/SkyRyu57" target="blank"><img src="github.png" alt="GitHub"></a>
-            <a href="https://wa.me/081278064663" target="blank"><img src="whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/57ricko?igsh=MWgxbTRueGl6eGZweQ==" target="blank"><img src="/aboutus/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/SkyRyu57" target="blank"><img src="/aboutus/github.png" alt="GitHub"></a>
+            <a href="https://wa.me/081278064663" target="blank"><img src="/aboutus/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </div>
         </div>
@@ -110,7 +139,7 @@
       </div>
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="javascript/about.js"></script>
 </html>
 
 
@@ -143,15 +172,15 @@
         let dominic = document.getElementById("minic");
         let ricko = document.getElementById("riko");
         dominic.addEventListener("mouseover", function () {
-            dominic.src = "dominic2.jpeg";
+            dominic.src = "/aboutus/dominic2.jpeg";
         });
         dominic.addEventListener("mouseout", function () {
-            dominic.src = "dominic.jpeg";
+            dominic.src = "/aboutus/dominic.jpeg";
         });
         ricko.addEventListener("mouseover", function () {
-            ricko.src = "ricko2.jpeg";
+            ricko.src = "/aboutus/ricko2.jpeg";
         });
         ricko.addEventListener("mouseout", function () {
-            ricko.src = "ricko.jpeg";
+            ricko.src = "/aboutus/ricko.jpeg";
         });
 </script>

@@ -1,11 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #AA0114;
+  top: 0;
+  z-index: 1;
+}
+.desain_main{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+.desain_main img{
+  width: 25%;
+  height: 25%;
+}
+.kontolner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: #FFD700;
+}
 .navbar {
-    position: fixed;
-    top: -1px;
-    left: 0;
-    border: none;
-    height: 150px;
-    z-index: 9999;
-    border-radius: none;
+  display: flex;
+  align-items: center;
+  background-color: #AA0114;
+  padding: 0 1rem;
+}
+.navbar a, .dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.navbar a:hover, .dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA0114;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.log {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  white-space: nowrap;
+}
+.log img {
+  height: 4rem;
+  background: #f7f7f7;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: content-box;
 }
 body {
     font-family: 'Noto Sans TC', sans-serif;
@@ -13,8 +92,8 @@ body {
     color: #511619;
     line-height: 1.6;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center; 
 }
 main.contentsamping {
     background: #fff7ee;
@@ -89,7 +168,7 @@ ol li {
     margin-bottom: 12px;
     font-weight: 600;
 }
-img {
+.memek {
     display: block;
     width: 600px;
     height: 400px;
@@ -98,7 +177,7 @@ img {
     box-shadow: 0 10px 25px rgba(191, 140, 66, 0.4);
     transition: transform 0.3s ease;
 }
-img:hover {
+.memek:hover {
     transform: scale(1.05);
 }
 .post {
@@ -128,7 +207,6 @@ img:hover {
     background-color: #e74c3c;
     color: white;
 }
-
 .share {
     background-color: #3498db;
     color: white;
@@ -147,31 +225,6 @@ img:hover {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-}
-@media (max-width: 600px) {
-body {
-    padding: 20px 15px;
-}
-main.contentsamping {
-    padding-top: 150px;
-    padding: 25px 20px;
-    border-radius: 15px;
-}
-h1 {
-    font-size: 2rem;
-    letter-spacing: 1.5px;
-}
-img {
-    border-radius: 12px;
-}
-.map-container {
-    height: 280px;
-}
-}
-@media screen and (max-width: 768px) {
-    .navbar {
-        height: 130px;
-    }
 }
 @media screen and (max-width: 768px) {
   main.contentsamping {
@@ -197,21 +250,41 @@ img {
     line-height: 1.4;
   }
 
-  img {
+  .memek {
     max-width: 100%;
     height: auto;
-  }
-
-  iframe {
-    width: 100%;
-    height: 200px;
   }
 
   .map-container {
     margin: 1rem 0;
   }
 }
+.menu-toggle {
+  display: none;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+/* 1. Untuk layar kecil dan tablet (600px ke bawah) */
 @media screen and (max-width: 600px) {
+  main.contentsamping {
+    padding-top: 150px;
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+  h1 {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+  }
+  .memek {
+      border-radius: 12px;
+  }
+  .map-container {
+      height: 280px;
+  }
   main.contentsamping {
     padding: 0.8rem;
     font-size: 0.9rem;
@@ -232,12 +305,27 @@ img {
   p, li {
     font-size: 0.85rem;
   }
-
-  iframe {
-    height: 180px;
+  .navbar {
+    flex-direction: column;
   }
 }
-@media screen and (max-width: 400px) {
+
+/* 2. Untuk layar sangat kecil (425px ke bawah) */
+@media screen and (max-width: 599px) {
+  .tombol {
+    width: 100px;
+    height: 50px;
+    font-size: 0.9rem;
+    padding: 10px;
+    margin: 5px;
+  }
+  .share {
+    width: 100px;
+    height: 50px;
+    font-size: 0.9rem;
+    padding: 10px; 
+    margin: 5px;
+  }
   main.contentsamping {
     padding: 0.6rem;
     font-size: 0.85rem;
@@ -258,8 +346,54 @@ img {
   p, li {
     font-size: 0.8rem;
   }
-
-  iframe {
-    height: 160px;
+  .kontolner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .log-container {
+    background-color: #AA0114;
+    width: 100%;
+    padding-left: 0.2rem;
+    display: flex;
+    justify-content: center;
+  }
+  header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .navbar {
+    width: 100%;
+    background-color: #AA0114;
+  }
+  .navbar a {
+    display: block;
+    padding: 0.8rem;
+  }
+  .desain1{
+    display:none;
+  }
+  .lamp1, .lamp2{
+    display: none;
+  }
+  .sz{
+    display: none;
+  }
+}  
+@media screen and (max-width: 599px) {
+  .music-controls {
+    z-index: 1;
+  }
+  .menu-toggle {
+    display: inline-block;
+    margin-top: 15px;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+  }
+  .navbar.show {
+    display: flex;
   }
 }

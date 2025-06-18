@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Envelope Animation + Contact Form</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     (function () {
@@ -15,40 +15,41 @@
   </script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="top-menu">
-        <div class="logo-container">
-          <a href="/taiwan_food.html" class="logo">
-            <img src="img/logo.png" alt="Logo" class="logo" />
-            <p class="page-title"></p>
-          </a>
-        </div>
-      </div>
-      <nav class="navbar">
-        <a href="/taiwan_food.html">Beranda</a>
-        <a href="/detail/detail.html">Detail</a>
-        <div class="dropdown">
-          <button class="dropbtn">Resep</button>
-          <div class="dropdown-content">
-            <a href="/resep/Beef-Noodles.html">Beef Noodles</a>
-            <a href="/resep/Drunken.html">Drunken Chicken</a>
-            <a href="/resep/Minced.html">Minced Pork Rice</a>
-            <a href="/resep/slender.html">Slender Noodles with Oysters</a>
-            <a href="/resep/Soup.html">Soup Dumplings</a>
+  <header class="heding">
+      <div class="kontolner">
+        <div class="top-menu">
+          <div class="log-container">
+            <div class="log">
+              <img src="assets/icons/logo.png" alt="Logo" />
+              <p class="page-title"></p>
+            </div>
           </div>
         </div>
-        <a href="/aboutus/about_us.html">About Us</a>
-        <a href="/contact us">Contact Us</a>
-      </nav>
-    </div>
-    <div class="desain_main">
-      <img src="img/1.png" alt="desain" class="desain1" />
-      <img src="img/1.png" alt="desain" class="desain1" />
-      <img src="img/1.png" alt="desain" class="desain1" />
-      <img src="img/1.png" alt="desain" class="desain1" />
-    </div>
-  </header>
+        <button class="menu-toggle" onclick="toggleNavbar()">☰</button>
+        <nav class="navbar">
+          <a href="taiwan_food.html">Beranda</a>
+          <a href="detail.html">Detail</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resep</button>
+            <div class="dropdown-content">
+              <a href="Beef-Noodles.html">Beef Noodles</a>
+              <a href="Drunken.html">Drunken Chicken</a>
+              <a href="Minced.html">Minced Pork Rice</a>
+              <a href="slender.html">Slender Noodles with Oysters</a>
+              <a href="Soup.html">Soup Dumplings</a>
+            </div>
+          </div>
+          <a href="about_us.html">About Us</a>
+          <a href="contact us.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="desain_main">
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+        <img src="taiwan_food_assets/1.png" alt="desain" class="desain1" />
+      </div>
+    </header>
 
   <!-- Amplop -->
   <div class="envelope-container" onclick="showContactForm()">
@@ -79,11 +80,11 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-      <button type="submit">Send</button>
+      <button class="tombol" type="submit">Send</button>
     </form>
   </div>
 
-  <script src="contact us.js"></script>
+  <script src="/javascript/contact us.js"></script>
 
   <!-- <section class="quote-section">
         <div class="quote-content">

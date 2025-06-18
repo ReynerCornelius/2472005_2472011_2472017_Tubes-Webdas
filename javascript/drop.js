@@ -9,3 +9,7 @@ $(document).ready(function(){
         $('#instruksi').slideToggle();
     });
 });
+function toggleNavbar() {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("show");
+}
